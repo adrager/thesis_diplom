@@ -1,0 +1,254 @@
+% ---------------------------------------------------------------------------------
+% Main tex file
+% $Id: Thesis.tex,v 1.2 2012/02/04 22:54:40 matsch Exp $
+
+\documentclass[
+twoside=false,
+headsepline,     % Line under page header
+headings=normal,
+open=any,
+numbers=noenddot, % Otherwise there will be a dot after the chapter
+numbering %in case letters are used somewhere e.g. in the appendix
+]{scrreprt} %report scrreprt
+\addtolength{\topmargin}{-0.2cm}
+\setlength{\textwidth}{15cm}
+\setlength{\textheight}{22.4cm}
+%\oddsidemargin -0.2cm
+%\evensidemargin 0.6cm
+
+
+
+%\documentclass[
+%a4,
+%oneside,   %%% change here to twoside
+%headsepline,     % Line under page header
+%normalheadings,
+%openany,
+%numbers=noenddot % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
+%]{scrreprt} %report scrreprt
+%\setlength{\textwidth}{15cm}
+%\setlength{\textheight}{22.4cm}
+%\oddsidemargin -0.1cm
+%\evensidemargin 0.6cm
+
+\usepackage[automark,headsepline]{scrpage2}
+
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead{\headmark}
+\ohead{\pagemark}
+\cfoot{}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Alter some LaTeX defaults for better treatment of figures,
+% from http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html
+% See p.105 of "TeX Unbound" for suggested values.
+% See pp. 199-200 of Lamport's "LaTeX" book for details.
+% General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+% Parameters for TEXT pages (not float pages):
+%\setcounter{topnumber}{2}
+%\setcounter{bottomnumber}{2}
+%\setcounter{totalnumber}{4}     % 2 may work better
+%\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+% Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than top fraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+% remember to use [htp] or [htpb] for placement
+
+\input{newcommand}
+
+
+
+
+
+\usepackage{amsfonts}
+\usepackage{amsmath}  % Correct size switching in mathmode when using \text{} instead of \textrm{}
+\usepackage{amssymb} 
+\usepackage{amstext} 
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{rotating}
+
+
+%%%%%%%%%%%% ALL chapters
+
+%% definition of commands for latex
+\input{definitions.tex}
+
+%\title{Estimation of lost leptons from \ttbar and \wpj events at the CMS detector}
+\author{Arne-Rasmus Dr\"ager}
+
+
+%% config stuff
+% pdflatex packages
+\usepackage[pdftex]{hyperref}
+\hypersetup{bookmarks=true}
+\hypersetup{unicode=true}
+\hypersetup{colorlinks=true,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black}
+\hypersetup{pdftitle={Search for Supersymmetry in All-Hadronic Final States at CMS}}
+\hypersetup{pdfauthor={Arne-Rasmus Dr\"ager}}
+
+
+%%%% start of the thesis
+
+\begin{document}
+
+%title page
+\begin{titlepage}
+  \begin{center}
+    \thispagestyle{empty}
+    \vspace*{1cm}
+    \begin{doublespace} 
+      \textbf{\huge
+        Estimation of lost electrons and muons from \ttbar and \wpj events \linebreak
+        at the CMS detector}\\
+      \vskip1.5cm
+      \begin{Large} 
+        \textbf{Diplomarbeit\\
+          Institute f\"{u}r Experimentalphysik\\
+          der Universit\"{a}t Hamburg\\}
+      \end{Large}
+      \vskip2cm
+      \begin{large}
+        vorgelegt von\\
+        {\bf Arne-Rasmus Dr\"{a}ger}
+        \vfill
+        \noindent{Hamburg\\2012}
+      \end{large}
+    \end{doublespace} 
+  \end{center}
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+
+\quad
+\vfill
+\noindent{
+\begin{tabular}{ll}
+Gutachter der Doktorarbeit:                & Prof.\ Dr.\ Christian Sander\\ 
+
+                                         
+\end{tabular}
+}
+
+\newpage
+\thispagestyle{empty}
+\section*{Abstract}
+\input{introduction/abstract.tex}
+\clearpage
+\section*{Abriss}
+\input{introduction/kurzfassung.tex}
+\newpage 
+\thispagestyle{empty}
+\quad 
+\newpage
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+
+
+
+%\maketitle
+\listoffigures
+\chapter{Introduction}
+\label{sec:introduction}
+\input{introduction/introduction.tex}
+\cleardoublepage
+
+\chapter{Theory}
+\label{sec:theory}
+\input{theory/theory.tex}
+\cleardoublepage
+
+\chapter{LHC and CMS detector}
+\label{sec:detector}
+\input{detector/detector.tex}
+\cleardoublepage
+
+\chapter{The concept of jets with missing transverse momentum analysis}
+\label{sec:search_beyondSM}
+\input{analyse/analyse.tex}
+\cleardoublepage
+
+\chapter{The prediction of lost leptons from \ttbar and \wpj events}
+\label{sec:lostlepton}
+\input{lostlepton/lostlepton.tex}
+\cleardoublepage
+
+\chapter{Combination of other backgrounds with the lost lepton and result interpretation}
+\label{sec:ra2}
+\input{results/ra2.tex}
+\cleardoublepage
+
+\chapter{Conclusion and outlook}
+\label{sec:conclusion}
+\input{results/conclusion.tex}
+\cleardoublepage
+
+\chapter{Appendix}
+\label{sec:appendix}
+\input{appendix/appendix.tex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%% end not for the thesis
+
+%% commands
+
+
+
+
+
+
+
+\cleardoublepage
+\phantomsection
+%\renewcommand
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{lucas_unsrt}
+\bibliography{thesis}
+
+
+
+
+
+\end{document}
+

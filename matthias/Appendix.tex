@@ -1,0 +1,440 @@
+% ---------------------------------------------------------------------------------
+% Chapter: Appendix
+% $Id: Appendix.tex,v 1.2 2012/02/04 22:54:40 matsch Exp $
+
+
+% ---------------------------------------------------------------------------------
+\section{Jets} \label{sec:App:Jets}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/jets/fig_ResponseMeasurementVsTruth.pdf} \\
+  \includegraphics[width=\textwidth]{figures/jets/fig_ResponseMeasurementVsMeasurement.pdf}
+  \caption{\todo{redo with falling spectrum}}
+  \label{fig:App:Jets:ResponseMeasurementProcedure}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.45\textwidth]{figures/core/sketch_Migration.pdf}
+ \caption{\todo{Add caption}
+ }
+ \label{fig:App:Jets:Migration}
+\end{figure}
+
+
+
+\begin{table}[!ht]
+  \caption{
+    \todo{add caption}
+    %Parameter values of the MC truth resolution \qeq{eq:ResFit:MCTruthReso}.
+    %The uncertainties assigned to the fitted values are the statistical uncertainties from the fit.
+    \fixme{latest values}
+  }
+  \begin{center}
+    \begin{tabular}{crrr}
+      \toprule
+      $|\eta|$ & $N\,(\gevnospace)$ & $S\,(\sqrt{\gevnospace})$ & $m$ \\
+      \midrule
+      $0.0 - 0.5$ & $1.566 \pm 0.055$ & $0.381 \pm 0.004$ & $0.366 \pm 0.004$ \\
+      $0.5 - 1.1$ & $1.910 \pm 0.047$ & $0.385 \pm 0.005$ & $0.369 \pm 0.004$ \\
+      $1.1 - 1.7$ & $0.598 \pm 0.308$ & $0.706 \pm 0.014$ & $0.159 \pm 0.007$ \\
+      $1.7 - 2.3$ & $0.825 \pm 0.373$ & $0.867 \pm 0.039$ & $-0.035 \pm 0.017$ \\
+      $2.3 - 5.0$ & $-1.723 \pm 0.191$ & $1.119 \pm 0.055$& $-0.117 \pm 0.021$ \\
+
+
+
+      $0.0 - 0.5$ & $1.477 \pm 0.058$ & $0.379 \pm 0.004$ & $0.367 \pm 0.004$ \\
+      $0.5 - 1.1$ & $1.840 \pm 0.048$ & $0.383 \pm 0.005$ & $0.371 \pm 0.004$ \\
+      $1.1 - 1.7$ & $0.418 \pm 0.446$ & $0.703 \pm 0.014$ & $0.16 \pm 0.007$ \\
+      $1.7 - 2.3$ & $0.551 \pm 0.557$ & $0.866 \pm 0.039$ & $-0.035 \pm 0.017$ \\
+      $2.3 - 5.0$ & $-1.66 \pm 0.196$ & $1.086 \pm 0.054$ & $-0.106 \pm 0.021$ \\
+
+
+%      $0.0 - 0.5$ &  $1.55 \pm 0.06$ & $0.382 \pm 0.004$ &  $0.365 \pm 0.004$ \\
+%      $0.5 - 1.1$ &  $1.85 \pm 0.05$ & $0.389 \pm 0.004$ &  $0.366 \pm 0.004$ \\
+%      $1.1 - 1.7$ &  $1.03 \pm 0.18$ & $0.692 \pm 0.013$ &  $0.166 \pm 0.007$ \\
+%      $1.7 - 2.3$ &  $0.81 \pm 0.39$ & $0.875 \pm 0.038$ & $-0.039 \pm 0.016$ \\
+%      $2.3 - 5.0$ & $-1.88 \pm 0.18$ & $1.175 \pm 0.057$ & $-0.138 \pm 0.020$ \\
+\bottomrule
+    \end{tabular}
+  \end{center}
+  \label{tab:App:Jets:MCTruthResolution}
+\end{table}
+
+
+\section{RA2}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/ra2/CMS_SMSLimits.pdf}
+  \end{center}
+  \caption{\todo{Add caption}}
+  \label{fig:App:RA2:ExcludedMassesCMS}
+\end{figure}
+
+\clearpage
+
+
+\section{Jet Transverse Momentum Resolution} \label{sec:App:ResCore}
+
+\begin{table}[!ht]
+  \caption{\fixme{caption} \todo{add effective prescales} Trigger paths used in this analysis and \ptave thresholds where the trigger is $\ge99\%$ efficient.}
+  \begin{center}
+    \begin{tabular}{lr}
+      \toprule
+      Trigger & \ptavei{99} (\gevnospace)\\
+      \midrule
+      \texttt{HltDiJetAve30}  &  45 \\ 
+      \texttt{HltDiJetAve60}  &  75 \\ 
+      \texttt{HltDiJetAve80}  & 100 \\ 
+      \texttt{HltDiJetAve110} & 135 \\
+      \texttt{HltDiJetAve150} & 175 \\
+      \texttt{HltDiJetAve190} & 220 \\
+      \texttt{HltDiJetAve240} & 270 \\
+      \texttt{HltDiJetAve300} & 335 \\  
+      \texttt{HltDiJetAve370} & 405 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \label{tab:App:ResCore:TriggerPaths}
+\end{table}
+
+\begin{table}[!htb]
+  \caption{(data) \todo{add caption}}
+  \begin{center}
+    \begin{tabular}{rrr}
+      \toprule
+      Filter    & $N(\text{passed})$ &   Efficiency \\ 
+      \midrule
+      Total & $   7589851$  & --- \\
+      One-good-vertex filter & $   7588500$  & $   0.9998220^{+0.0000048}_{-0.0000049}$ \\
+      HBHE-noise filter & $   7533444$  & $   0.9927448^{+0.0000308}_{-0.0000309}$ \\
+      Beam-halo filter & $   7515674$  & $   0.9976412^{+0.0000176}_{-0.0000177}$ \\
+      EE-noise filter & $   7515672$  & $   0.9999997^{+0.0000002}_{-0.0000002}$ \\
+      No-scraping filter & $   7515671$  & $   0.9999999^{+0.0000001}_{-0.0000002}$ \\
+      PF-post-processing filter & $   7511594$  & $   0.9994575^{+0.0000085}_{-0.0000085}$ \\
+      Tracking-failure filter & $   7470144$  & $   0.9944819^{+0.0000270}_{-0.0000271}$ \\
+      TP filter & $   7464547$  & $   0.9992508^{+0.0000100}_{-0.0000101}$ \\
+      BE filter & $   7400881$  & $   0.9914709^{+0.0000336}_{-0.0000337}$ \\
+      Lepton veto & $   7380802$  & $   0.9972869^{+0.0000191}_{-0.0000192}$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \label{tab:App:ResCore:CutFlowData}
+\end{table}
+
+\begin{table}[!htb]
+  \caption{(mc) \todo{add caption}}
+  \begin{center}
+    \begin{tabular}{rrr}
+      \toprule
+      Filter    & $N(\text{passed})$ &   Efficiency \\ 
+      \midrule
+      Total & $  10930800$ &  --- \\
+      One-good-vertex filter & $  10930718$ &  $    0.999992^{+0.000001}_{-0.000001}$ \\
+      HBHE-noise filter & $  10899989$ &  $    0.997189^{+0.000016}_{-0.000016}
+      $ \\
+      Beam-halo filter & $  10899739$ &  $    0.999977^{+0.000001}_{-0.000001}$ \\
+      EE-noise filter & $  10899739$ &  $    1.000000^{+0.000000}_{-0.000000}$ \\
+      No-scraping filter & $  10899739$ &  $    1.000000^{+0.000000}_{-0.000000}$ \\
+      PF-post-processing filter & $  10894895$ &  $    0.999556^{+0.000006}_{-0.000006}$ \\
+      Tracking-failure filter & $  10774349$ &  $    0.988936^{+0.000032}_{-0.000032}$ \\
+      TP filter & $  10756505$ &  $    0.998344^{+0.000012}_{-0.000012}$ \\
+      BE filter & $  10674908$ &  $    0.992414^{+0.000026}_{-0.000027}$ \\
+      Lepton veto & $  10662387$ &  $    0.998827^{+0.000010}_{-0.000011}$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \label{tab:App:ResCore:CutFlowMC}
+\end{table}
+
+\begin{table}[!ht]
+  \caption{\todo{add caption, synchronise style with \qtab{tab:ResTails:EvtSel:EtaPtAveBins}}
+    %$\eta$ and \ptave binning taking into account trigger thresholds.
+  }
+  \begin{center}
+    \begin{tabular}{cl}
+      \toprule
+      $|\eta|$ & \ptave bin boundaries (\gevnospace) \\
+      \midrule
+      $0.0 - 0.5$ & 50, 75, 101, 135, 180, 197, 225, 245, 278, 287, 300, 320, 345, 370, 420, 500, 1500 \\
+      $0.5 - 1.1$ & 50, 75, 101, 135, 180, 197, 225, 245, 278, 287, 300, 320, 345, 370, 420, 490, 1500 \\
+      $1.1 - 1.7$ & 50, 78, 101, 138, 185, 230, 278, 294, 345, 420, 1500 \\
+      $1.7 - 2.3$ & 50, 78, 101, 138, 185, 230, 278, 345, 420, 1500 \\
+      $2.3 - 5.0$ & 50, 78, 101, 138, 185, 230 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \label{tab:App:ResCore:EtaPtAveBins}
+\end{table}
+
+\begin{table}[!ht]
+  \caption{PLI parameters\todo{add caption}
+  }
+  \begin{center}
+    \begin{tabular}{crrr}
+      \toprule
+      $|\eta|$ &  $N\,(\gevnospace)$ & $S\,(\sqrt{\gevnospace})$ & $m$ \\
+      \midrule
+      $ 0.0 < |\eta| < 0.5$ & $3.641 \pm 0.023$ & $0.0093 \pm 0.0009$  & $1.010 \pm 0.028$ \\
+      $ 0.5 < |\eta| < 1.1$ & $3.623 \pm 0.023$ & $0.0099 \pm 0.0011$  & $0.983 \pm 0.033$ \\
+      $ 1.1 < |\eta| < 1.7$ & $3.787 \pm 0.028$ & $0.0007 \pm 0.0003$  & $1.856 \pm 0.133$ \\
+      $ 1.7 < |\eta| < 2.3$ & $3.670 \pm 0.023$ & $0.0000 \pm 0.0000$  & $2.712 \pm 0.227$ \\
+      $ 2.3 < |\eta| < 5.0$ & $-1.703 \pm 2.038$ & $3.2783 \pm 0.9976$ & $-0.935 \pm 0.047$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \label{tab:App:ResCore:PLIParameters}
+\end{table}
+
+
+\section{Jet Transverse Momentum Response Tails} \label{sec:App:ResTail}
+
+\begin{table}[!htb]
+  \caption{
+    \todo{revise caption}
+    Start of the asymmetry tail region $A_{0}$ for \window{2.5} (\textit{top}) and \window{3.5} (\textit{bottom}) in the different \ptave and $\eta$ bins. 
+    Due to binning effects, the effective boundaries correspond to slightly different multiples of $\sigma_{A}$.
+    \todo{revise caption}
+  }
+  \label{tab:App:ResTail:WindowBorders}
+  %%%%% Table: Window Borders for sigma > 2.5
+  \begin{center}
+    \begin{tabular}{cccccc}
+      \toprule
+      $|\eta|$ & $\ptave \,(\gevnospace)$ & $A_{0}$ & $A_{0}/\sigma_{A}$ \\ 
+      \midrule
+      $0.0 - 0.5$ & $45 - 220$ & $0.129$ & $2.090$ \\
+      $0.0 - 0.5$ & $220 - 270$ & $0.129$ & $2.319$ \\
+      $0.0 - 0.5$ & $270 - 312$ & $0.109$ & $2.057$ \\
+      $0.0 - 0.5$ & $312 - 360$ & $0.109$ & $2.173$ \\
+      $0.0 - 0.5$ & $360 - 498$ & $0.089$ & $1.931$ \\
+      $0.0 - 0.5$ & $498 - 1500$ & $0.089$ & $2.177$ \\
+      \midrule
+      $0.5 - 1.1$ & $45 - 220$ & $0.129$ & $2.115$ \\
+      $0.5 - 1.1$ & $220 - 294$ & $0.129$ & $2.339$ \\
+      $0.5 - 1.1$ & $294 - 360$ & $0.109$ & $2.115$ \\
+      $0.5 - 1.1$ & $360 - 1500$ & $0.109$ & $2.315$ \\
+      \midrule
+      $1.1 - 1.7$ & $45 - 220$ & $0.149$ & $2.248$ \\
+      $1.1 - 1.7$ & $220 - 335$ & $0.109$ & $1.951$ \\
+      $1.1 - 1.7$ & $335 - 1500$ & $0.109$ & $2.126$ \\
+      \midrule
+      $1.7 - 2.3$ & $45 - 220$ & $0.089$ & $1.777$ \\
+      $1.7 - 2.3$ & $220 - 1500$ & $0.089$ & $2.005$ \\
+      \midrule
+      $2.3 - 5.0$ & $45 - 220$ & $0.149$ & $0.454$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  
+
+  %%%%% Table: Window Borders for sigma > 3.5
+  \begin{center}
+    \begin{tabular}{cccccc}
+      \toprule
+      $|\eta|$ & $\ptave \,(\gevnospace)$ & $A_{0}$ & $A_{0}/\sigma_{A}$ \\ 
+      \midrule
+      $0.0 - 0.5$ &  $45 - 220$ & $0.188$ & $3.055$ \\
+      $0.0 - 0.5$ & $220 - 270$ & $0.168$ & $3.032$ \\
+      $0.0 - 0.5$ & $270 - 312$ & $0.168$ & $3.180$ \\
+      $0.0 - 0.5$ & $312 - 360$ & $0.149$ & $2.964$ \\
+      $0.0 - 0.5$ & $360 - 498$ & $0.149$ & $3.219$ \\
+      $0.0 - 0.5$ &$498 - 1500$ & $0.129$ & $3.145$ \\
+      \midrule
+      $0.5 - 1.1$ &  $45 - 220$ & $0.188$ & $3.092$ \\
+      $0.5 - 1.1$ & $220 - 294$ & $0.168$ & $3.058$ \\
+      $0.5 - 1.1$ & $294 - 360$ & $0.149$ & $2.884$ \\
+      $0.5 - 1.1$ &$360 - 1500$ & $0.149$ & $3.156$ \\
+      \midrule
+      $1.1 - 1.7$ &  $45 - 220$ & $0.208$ & $3.148$ \\
+      $1.1 - 1.7$ & $220 - 335$ & $0.168$ & $3.016$ \\
+      $1.1 - 1.7$ &$335 - 1500$ & $0.149$ & $2.899$ \\
+      \midrule
+      $1.7 - 2.3$ &  $45 - 220$ & $0.149$ & $2.961$ \\
+      $1.7 - 2.3$ & $220 - 1500$ & $0.129$ & $2.897$ \\
+      \midrule
+      $2.3 - 5.0$ &$45 - 220$ & $0.208$ & $0.636$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\begin{table}[!htb]
+  \caption{
+    \todo{revise caption}
+Comparison of the fractional number of events \mbox{$\fasymmc(\pti{3}/\ptave = 0.05)$} to the expected number given a purely Gaussian asymmetry distribution.
+    \todo{revise caption}
+  }
+  \label{tab:App:ResTail:FAsymFirstPoint}
+  %%%%% Table: fAsym of first point for inclusive windows
+  \begin{center}
+    \begin{tabular}{cccccc}
+      \toprule
+      $|\eta|$ & $\ptave \,(\gevnospace)$ & \multicolumn{2}{c}{\window{2.5}} & \multicolumn{2}{c}{\window{3.5}} \\
+      && $\int^{\infty}_{A_{0}}\mathcal{G}$ & $\fasymmc(\pti{3}/\ptave = 0.05)$ & $\int^{\infty}_{A_{0}}\mathcal{G}$ & $\fasymmc(\pti{3}/\ptave = 0.05)$\\ 
+      \midrule
+      $0.0 - 0.5$ &  $45 - 220$ & $0.0183$ & $0.0221 \pm 0.0021$ & $0.0011$ & $0.0028 \pm 0.0008$ \\
+      $0.0 - 0.5$ & $220 - 270$ & $0.0102$ & $0.0150 \pm 0.0017$ & $0.0012$ & $0.0039 \pm 0.0009$ \\
+      $0.0 - 0.5$ & $270 - 312$ & $0.0198$ & $0.0241 \pm 0.0021$ & $0.0007$ & $0.0022 \pm 0.0006$ \\
+      $0.0 - 0.5$ & $312 - 360$ & $0.0149$ & $0.0196 \pm 0.0016$ & $0.0015$ & $0.0050 \pm 0.0008$ \\
+      $0.0 - 0.5$ & $360 - 498$ & $0.0267$ & $0.0337 \pm 0.0012$ & $0.0006$ & $0.0037 \pm 0.0004$ \\
+      $0.0 - 0.5$ &$498 - 1500$ & $0.0147$ & $0.0225 \pm 0.0005$ & $0.0008$ & $0.0046 \pm 0.0002$ \\
+      \midrule                                                                                   
+      $0.5 - 1.1$ &  $45 - 220$ & $0.0172$ & $0.0207 \pm 0.0019$ & $0.0010$ & $0.0024 \pm 0.0007$ \\
+      $0.5 - 1.1$ & $220 - 294$ & $0.0097$ & $0.0128 \pm 0.0011$ & $0.0011$ & $0.0027 \pm 0.0005$ \\
+      $0.5 - 1.1$ & $294 - 360$ & $0.0172$ & $0.0215 \pm 0.0014$ & $0.0020$ & $0.0048 \pm 0.0007$ \\
+      $0.5 - 1.1$ &$360 - 1500$ & $0.0103$ & $0.0142 \pm 0.0004$ & $0.0008$ & $0.0028 \pm 0.0002$ \\
+      \midrule                                                                                   
+      $1.1 - 1.7$ &  $45 - 220$ & $0.0123$ & $0.0167 \pm 0.0023$ & $0.0008$ & $0.0042 \pm 0.0012$ \\
+      $1.1 - 1.7$ & $220 - 335$ & $0.0255$ & $0.0336 \pm 0.0020$ & $0.0013$ & $0.0047 \pm 0.0008$ \\
+      $1.1 - 1.7$ &$335 - 1500$ & $0.0167$ & $0.0218 \pm 0.0011$ & $0.0019$ & $0.0046 \pm 0.0005$ \\
+      \midrule                                                                                   
+      $1.7 - 2.3$ &  $45 - 220$ & $0.0378$ & $0.0520 \pm 0.0058$ & $0.0015$ & $0.0078 \pm 0.0023$ \\
+      $1.7 - 2.3$ &$220 - 1500$ & $0.0225$ & $0.0248 \pm 0.0030$ & $0.0019$ & $0.0045 \pm 0.0013$ \\
+      \midrule                                                                                   
+      $2.3 - 5.0$ &  $45 - 220$ & $0.3239$ & $0.3244 \pm 0.0297$ & $0.2614$ & $0.2618 \pm 0.0279$ \\
+      \midrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\begin{table}[!htb]
+  \caption{
+    \todo{revise caption}
+    Extrapolated fractional number of events, $\fasym(0)$, in a \windowinf{2.5} (\textit{top}) and \windowinf{3.5} (\textit{bottom}) window in data and MC simulation.
+    The quoted uncertainties are statistical only.}
+  \label{tab:App:ResTails:ExtraNumEvtsIncl}
+  %%%%% Table: Extrapolation result for >2.5 sigma
+  \begin{center}
+    \begin{tabular}[ht]{ccccc}
+      \toprule
+      $|\eta|$ & $\ptave \,(\gevnospace)$ & $\mean{\ptave} \,(\gevnospace)$ & $\fasymdata(0)$ & $\fasymmc(0)$ \\ 
+      \midrule
+      $0.0 - 0.5$ & $45 - 220$ & $188.2 \pm 0.6$ & $0.017 \pm 0.001$ & $0.017 \pm 0.001$ \\ 
+      $0.0 - 0.5$ & $220 - 270$ & $243.1 \pm 0.3$ & $0.012 \pm 0.001$ & $0.010 \pm 0.001$ \\ 
+      $0.0 - 0.5$ & $270 - 312$ & $289.5 \pm 0.2$ & $0.018 \pm 0.001$ & $0.017 \pm 0.001$ \\ 
+      $0.0 - 0.5$ & $312 - 360$ & $337.9 \pm 0.2$ & $0.016 \pm 0.001$ & $0.015 \pm 0.001$ \\ 
+      $0.0 - 0.5$ & $360 - 498$ & $412.2 \pm 0.4$ & $0.027 \pm 0.001$ & $0.026 \pm 0.001$ \\ 
+      $0.0 - 0.5$ & $498 - 1500$ & $607.7 \pm 2.0$ & $0.019 \pm 0.001$ & $0.017 \pm 0.000$ \\ 
+      \midrule
+      $0.5 - 1.1$ & $45 - 220$ & $187.5 \pm 0.6$ & $0.016 \pm 0.001$ & $0.014 \pm 0.000$ \\ 
+      $0.5 - 1.1$ & $220 - 294$ & $263.3 \pm 0.3$ & $0.009 \pm 0.000$ & $0.009 \pm 0.000$ \\ 
+      $0.5 - 1.1$ & $294 - 360$ & $328.2 \pm 0.2$ & $0.015 \pm 0.001$ & $0.014 \pm 0.001$ \\ 
+      $0.5 - 1.1$ & $360 - 1500$ & $452.2 \pm 0.9$ & $0.010 \pm 0.000$ & $0.010 \pm 0.000$ \\ 
+      \midrule
+      $1.1 - 1.7$ & $45 - 220$ & $187.1 \pm 0.8$ & $0.011 \pm 0.001$ & $0.012 \pm 0.001$ \\ 
+      $1.1 - 1.7$ & $220 - 335$ & $280.6 \pm 0.4$ & $0.025 \pm 0.001$ & $0.027 \pm 0.001$ \\ 
+      $1.1 - 1.7$ & $335 - 1500$ & $401.0 \pm 1.0$ & $0.017 \pm 0.001$ & $0.016 \pm 0.001$ \\ 
+      \midrule
+      $1.7 - 2.3$ & $45 - 220$ & $182.5 \pm 1.3$ & $0.043 \pm 0.002$ & $0.045 \pm 0.002$ \\ 
+      $1.7 - 2.3$ & $220 - 1500$ & $289.8 \pm 1.5$ & $0.021 \pm 0.001$ & $0.020 \pm 0.001$ \\ 
+      \midrule
+      $2.3 - 5.0$ & $45 - 220$ & $163.7 \pm 5.8$ & $0.013 \pm 0.002$ & $0.016 \pm 0.002$ \\ 
+      \bottomrule
+  \end{tabular}
+  \end{center}
+  
+  %%%%% Table: Extrapolation result for >3.5 sigma
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \toprule
+      $|\eta|$ & $\ptave \,(\gevnospace)$ & $\mean{\ptave} \,(\gevnospace)$ & $\fasymdata(0)$ & $\fasymmc(0)$ \\ 
+      \midrule 
+      $0.0 - 0.5$ & $45 - 220$ & $188.2 \pm 0.6$ & $0.002 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      $0.0 - 0.5$ & $220 - 270$ & $243.1 \pm 0.3$ & $0.002 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      $0.0 - 0.5$ & $270 - 312$ & $289.5 \pm 0.2$ & $0.002 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      $0.0 - 0.5$ & $312 - 360$ & $337.9 \pm 0.2$ & $0.003 \pm 0.000$ & $0.003 \pm 0.000$ \\ 
+      $0.0 - 0.5$ & $360 - 498$ & $412.2 \pm 0.4$ & $0.002 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      $0.0 - 0.5$ & $498 - 1500$ & $607.7 \pm 2.0$ & $0.003 \pm 0.000$ & $0.003 \pm 0.000$ \\ 
+      \midrule
+      $0.5 - 1.1$ & $45 - 220$ & $187.5 \pm 0.6$ & $0.002 \pm 0.000$ & $0.001 \pm 0.000$ \\ 
+      $0.5 - 1.1$ & $220 - 294$ & $263.3 \pm 0.3$ & $0.002 \pm 0.000$ & $0.001 \pm 0.000$ \\ 
+      $0.5 - 1.1$ & $294 - 360$ & $328.2 \pm 0.2$ & $0.003 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      $0.5 - 1.1$ & $360 - 1500$ & $452.2 \pm 0.9$ & $0.002 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      \midrule
+      $1.1 - 1.7$ & $45 - 220$ & $187.1 \pm 0.8$ & $0.001 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      $1.1 - 1.7$ & $220 - 335$ & $280.6 \pm 0.4$ & $0.003 \pm 0.000$ & $0.003 \pm 0.000$ \\ 
+      $1.1 - 1.7$ & $335 - 1500$ & $401.0 \pm 1.0$ & $0.004 \pm 0.000$ & $0.003 \pm 0.000$ \\ 
+      \midrule
+      $1.7 - 2.3$ & $45 - 220$ & $182.5 \pm 1.3$ & $0.004 \pm 0.000$ & $0.004 \pm 0.000$ \\ 
+      $1.7 - 2.3$ & $220 - 1500$ & $289.8 \pm 1.5$ & $0.003 \pm 0.000$ & $0.002 \pm 0.000$ \\ 
+      \midrule
+      $2.3 - 5.0$ & $45 - 220$ & $163.7 \pm 5.8$ & $0.003 \pm 0.001$ & $0.003 \pm 0.001$ \\ 
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[!htb]
+  \caption{
+    \todo{revise caption}
+    Tail scale factors derived in the region \window{2.5} (\textit{top}) and \window{3.5} (\textit{bottom}) window.
+    In the one but rightmost column, the statistical uncertainties from the fit ($\pm$) and the upper (${}^{+}$) and lower (${}_{-}$) systematic uncertainties are quoted individually, while in the rightmost column the total uncertainty, as obtained from quadratic summation of both contributions, is listed.
+}
+  \label{tab:App:ResTails:ScaleFactorsIncl}
+  %%%%% Table: Scale factors for >2.5 sigma
+  \begin{center}
+    \begin{tabular}{cllll}
+      \toprule
+      $|\eta|$ & $\ptave\,(\gevnospace)$ & $\mean{\ptave}\,(\gevnospace)$ & Scale Factor ($\pm\text{stat}{}^{+\text{syst}}_{-\text{syst}}$) & Scale Factor ($\pm\text{total}$) \\
+      \midrule
+      $0.0 - 0.5$ & $45 - 220$ & $188.2 \pm 0.6$ & $1.020 \pm 0.057^{+0.274}_{-0.274}$ & $1.020^{+0.279}_{-0.279} $ \\
+      $0.0 - 0.5$ & $220 - 270$ & $243.1 \pm 0.3$ & $1.286 \pm 0.097^{+0.347}_{-0.347}$ & $1.286^{+0.360}_{-0.360} $ \\
+      $0.0 - 0.5$ & $270 - 312$ & $289.5 \pm 0.2$ & $1.058 \pm 0.067^{+0.247}_{-0.247}$ & $1.058^{+0.256}_{-0.256} $ \\
+      $0.0 - 0.5$ & $312 - 360$ & $337.9 \pm 0.2$ & $1.065 \pm 0.069^{+0.270}_{-0.270}$ & $1.065^{+0.279}_{-0.279} $ \\
+      $0.0 - 0.5$ & $360 - 498$ & $412.2 \pm 0.4$ & $1.023 \pm 0.039^{+0.210}_{-0.210}$ & $1.023^{+0.214}_{-0.214} $ \\
+      $0.0 - 0.5$ & $498 - 1500$ & $607.7 \pm 2.0$ & $1.117 \pm 0.074^{+0.257}_{-0.257}$ & $1.117^{+0.267}_{-0.267} $ \\
+      \midrule
+      $0.5 - 1.1$ & $45 - 220$ & $187.5 \pm 0.6$ & $1.153 \pm 0.056^{+0.317}_{-0.317}$ & $1.153^{+0.322}_{-0.322} $ \\
+      $0.5 - 1.1$ & $220 - 294$ & $263.3 \pm 0.3$ & $1.100 \pm 0.063^{+0.294}_{-0.294}$ & $1.100^{+0.301}_{-0.301} $ \\
+      $0.5 - 1.1$ & $294 - 360$ & $328.2 \pm 0.2$ & $1.095 \pm 0.056^{+0.365}_{-0.365}$ & $1.095^{+0.369}_{-0.369} $ \\
+      $0.5 - 1.1$ & $360 - 1500$ & $452.2 \pm 0.9$ & $1.047 \pm 0.046^{+0.308}_{-0.308}$ & $1.047^{+0.312}_{-0.312} $ \\
+      \midrule
+      $1.1 - 1.7$ & $45 - 220$ & $187.1 \pm 0.8$ & $0.913 \pm 0.070^{+0.248}_{-0.248}$ & $0.913^{+0.258}_{-0.258} $ \\
+      $1.1 - 1.7$ & $220 - 335$ & $280.6 \pm 0.4$ & $0.938 \pm 0.045^{+0.196}_{-0.196}$ & $0.938^{+0.201}_{-0.201} $ \\
+      $1.1 - 1.7$ & $335 - 1500$ & $401.0 \pm 1.0$ & $1.096 \pm 0.065^{+0.292}_{-0.292}$ & $1.096^{+0.299}_{-0.299} $ \\
+      \midrule
+      $1.7 - 2.3$ & $45 - 220$ & $182.5 \pm 1.3$ & $0.962 \pm 0.062^{+0.217}_{-0.217}$ & $0.962^{+0.226}_{-0.226} $ \\
+      $1.7 - 2.3$ & $220 - 1500$ & $289.8 \pm 1.5$ & $1.079 \pm 0.096^{+0.442}_{-0.442}$ & $1.079^{+0.453}_{-0.453} $ \\
+      \midrule
+      $2.3 - 5.0$ & $45 - 220$ & $163.7 \pm 5.8$ & $0.794 \pm 0.176^{+0.386}_{-0.386}$ & $0.794^{+0.424}_{-0.424} $ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  %%%%% Table: Scale factors for >3.5 sigma
+  \begin{center}
+    \begin{tabular}{cllll}
+      \toprule
+$|\eta|$ & $\ptave\,(\gevnospace)$ & $\mean{\ptave}\,(\gevnospace)$ & Scale Factor ($\pm\text{stat}{}^{+\text{syst}}_{-\text{syst}}$) & Scale Factor ($\pm\text{total}$) \\
+      \midrule
+      $0.0 - 0.5$ & $45 - 220$ & $188.2 \pm 0.6$ & $1.450 \pm 0.175^{+0.566}_{-0.566}$ & $1.450^{+0.593}_{-0.593} $ \\
+      $0.0 - 0.5$ & $220 - 270$ & $243.1 \pm 0.3$ & $1.149 \pm 0.177^{+0.329}_{-0.329}$ & $1.149^{+0.373}_{-0.373} $ \\
+      $0.0 - 0.5$ & $270 - 312$ & $289.5 \pm 0.2$ & $1.279 \pm 0.195^{+0.340}_{-0.340}$ & $1.279^{+0.392}_{-0.392} $ \\
+      $0.0 - 0.5$ & $312 - 360$ & $337.9 \pm 0.2$ & $0.886 \pm 0.131^{+0.170}_{-0.170}$ & $0.886^{+0.214}_{-0.214} $ \\
+      $0.0 - 0.5$ & $360 - 498$ & $412.2 \pm 0.4$ & $0.969 \pm 0.116^{+0.166}_{-0.166}$ & $0.969^{+0.203}_{-0.203} $ \\
+      $0.0 - 0.5$ & $498 - 1500$ & $607.7 \pm 2.0$ & $1.020 \pm 0.158^{+0.150}_{-0.150}$ & $1.020^{+0.218}_{-0.218} $ \\
+      \midrule
+      $0.5 - 1.1$ & $45 - 220$ & $187.5 \pm 0.6$ & $1.558 \pm 0.170^{+0.491}_{-0.491}$ & $1.558^{+0.520}_{-0.520} $ \\
+      $0.5 - 1.1$ & $220 - 294$ & $263.3 \pm 0.3$ & $1.480 \pm 0.155^{+0.484}_{-0.484}$ & $1.480^{+0.508}_{-0.508} $ \\
+      $0.5 - 1.1$ & $294 - 360$ & $328.2 \pm 0.2$ & $1.183 \pm 0.123^{+0.336}_{-0.336}$ & $1.183^{+0.358}_{-0.358} $ \\
+      $0.5 - 1.1$ & $360 - 1500$ & $452.2 \pm 0.9$ & $1.148 \pm 0.107^{+0.298}_{-0.298}$ & $1.148^{+0.316}_{-0.316} $ \\
+      \midrule
+      $1.1 - 1.7$ & $45 - 220$ & $187.1 \pm 0.8$ & $0.575 \pm 0.132^{+0.242}_{-0.242}$ & $0.575^{+0.275}_{-0.275} $ \\
+      $1.1 - 1.7$ & $220 - 335$ & $280.6 \pm 0.4$ & $1.099 \pm 0.130^{+0.346}_{-0.346}$ & $1.099^{+0.370}_{-0.370} $ \\
+      $1.1 - 1.7$ & $335 - 1500$ & $401.0 \pm 1.0$ & $1.360 \pm 0.156^{+0.435}_{-0.435}$ & $1.360^{+0.462}_{-0.462} $ \\
+      \midrule
+      $1.7 - 2.3$ & $45 - 220$ & $182.5 \pm 1.3$ & $0.859 \pm 0.141^{+0.358}_{-0.358}$ & $0.859^{+0.384}_{-0.384} $ \\
+      $1.7 - 2.3$ & $220 - 1500$ & $289.8 \pm 1.5$ & $1.120 \pm 0.222^{+0.584}_{-0.584}$ & $1.120^{+0.625}_{-0.625} $ \\
+      \midrule
+      $2.3 - 5.0$ & $45 - 220$ & $163.7 \pm 5.8$ & $1.268 \pm 0.458^{+0.830}_{-0.830}$ & $1.268^{+0.948}_{-0.948} $ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\cleardoublepage

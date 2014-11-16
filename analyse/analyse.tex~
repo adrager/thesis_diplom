@@ -1,0 +1,202 @@
+
+
+
+
+Short summary of the method:
+
+\begin{itemize}
+ \item Select one well isolated muon
+ \item Reconstructed transverse mass of \mtw <100 GeV
+ \item Correct for inefficiency of the \mtw cut (parametized in NJet about 90\% eff)
+ \item Correct for dileptonic events (over estimated correct down by 1.5\% of the total controlsample
+ \item Weight for iso, reco out of acceptance muons
+ \item Weight for out of acceptance, reco and not isoalted electrons
+\end{itemize}
+the uncertainties:
+
+\begin{itemize}
+ \item statistics of the control sample up to 100\%
+ \item uncertainty on the transverse mass cut 3.2\% this is something like 50\% includes statistical uncertainty of the eff maps the rest on the correction factor of the cut handwaving 
+ \item acceptance pdf uncertainty and statistical uncertainty on the used eff maps
+ \item Di-Lep correction also handwaving
+ \item Elec, Muon iso/reco all included statistical unceratinty and unceratinty obtrained by comparing tag and probe eff obtained from z events data and mc
+ \item Other SM processes. tried to select CS from qcd samples and di boson sample did not find any.... 3\% conservative
+ \item Non-Closure includes most points covers for residual problems of the method due to small statistics in the search regions
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+%%% FIX ME add here particle flow objects
+
+
+%\section{Search for physics beyond the Standard Model with the final state of jets and missing transverse energy}
+%\label{sec:search_beyondSM}
+Many models of physics beyond the standard model predict events with missing transverse energy. A typical scenario includes particles which are heavy, some being stable and do not interact with the detector. 
+%For example in R-Party conserving super symmetry models, the LSP (Section\ref{sec:Theory}) would leave the detector undetected leading to missing transverse energy. 
+For R-Parity conserving SUSY heavy gluinos and squarks\footnote{if they are kinematically accessible}, are expected to be produced at pp colliders like the LHC, since they are color charged. Many SUSY models predict them to decay rapidly in cascades to lighter SUSY particles resulting at the end in the lightest supersymmetric particle (LSP), which would be stable and leave the detector without any interaction causing an imbalance in the transverse momentum. The resulting signature is missing transverse momentum (\MHT) from the LSP and jets leading to high \HT.\\%This method was developed and improved within an analysis focused on this signature.\\
+This signature is experimentally very challenging since SM processes can also lead to high \HT and \MHT events. Therefore it is crucial to predict these background events as precisely as possible. 
+The four following SM processes have been found to contribute to these signature:
+\begin{itemize}
+ \item The QCD background arising from mismeasured jets leading to \MHT,
+ \item the ''$Z$ invisible'' background from $Z+Jets$ events where the $Z$ decays to two neutrinos,
+ \item the ''hadronic $\tau$'' background, arising from \wpj or \ttbar events. The involved $W$ bosons decay to a $\tau$'s which decay further hadronically to jets.  
+ \item the ''lost-lepton'' background including \wpj or \ttbar events which decay to not identified muons or electrons in the final state.
+%last main background argises from events where the $W$ from \wpj or \ttbar events decay further to an electron or a muon together with a $\nu$. This events can enter the selection if the explicit lepton veto (introduced in \ref{sec:event_selection}) fails. This is called the Lost-Lepton background. This covers also $W$ decays with the intermediate state of a $\tau$ decaying further in a electron or muon and neutrino.
+\end{itemize}
+These four main backgrounds are all data-driven\footnote{Data-driven refers to using data events, not simulated events, to estimate the backgrounds.} estimated. 
+%This thesis focuses on the prediction of events including not detected electrons or muons from the decay of \wpj or \ttbar events.
+%Together with the $\ptmiss$ of the LSP this is the signatur for which the in this thesis discussed background estimation is relevant.
+%Many analyses search for events with missing transverse energy since many concepts of physics beyond the sandardmodel expect particles to not interact with the detector. 
+
+
+
+
+
+\section{Event Selection}
+\label{sec:event_selection}
+The event selection is motivated by all the contributing backgrounds with some of the selection criteria introduced to reduce particular backgrounds.
+In the ''baseline'' selection events are selected according to the following criteria:
+\begin{itemize}
+ \item At least 3 jets with $\pt > 50$ GeV and $|\eta| < 2.5$ are required.  
+ \item $\HT > 500$ GeV
+ \item $\MHT > 200$ GeV
+\end{itemize}
+In addition, further cuts have been introduced to reduce the backgrounds:
+\begin{itemize}
+ \item $ | \Delta \phi ( J_{n} , \MHT ) | > 0.5$ rad, $n=1,2$ and $ | \Delta\phi ( J_{3} , \MHT ) | > 0.3 \text{ rad}$ with $J$ being the jets in an event.
+      This cut has been introduced to remove most of the QCD events including mismeasured jets, where the \MHT  is aligned to the next-to-leading jet. The cut on $ \Delta\phi $ at 0.5 has been chosen to be equal to the jet cone size, while the looser cut at 0.3 retains signal efficiency.
+ \item An explicit lepton veto rejects events including identified electrons or muons reducing the background arising from leptonical decaying \W bosons which include naturally missing energy from the involved $\nu$. 
+\end{itemize}
+
+The lepton isolation criteria is defined to be as loose as possible in order to reduce \wpj and \ttbar background events. Most, but not all of the criteria for $\mu$ and electrons are the same.\\
+Muons are required to have:
+\begin{itemize}
+ \item $\pt > 10$ GeV and $|\eta| < 2.4$.
+ \item A track reconstructed from a combination of inner tracker and the muon system have to be matched to the primary vertex within $200 \mu$m transverse and $1$ cm  longitudinal.
+\end{itemize}
+For electrons the required conditions are:
+\begin{itemize}
+ \item $\pt > 10$ GeV and $|\eta| < 2.5$ excluding the transition region $1.4442 < |\eta| < 1.566$ 
+ %\item be matched to a good-quality  GSF (Gaussian sum filter) track %(\ref{The CMS Collaboration. Electron reconstruction and identication at p s = 7 TeV.}
+\end{itemize}
+Electrons and muons must also fulfill this relative isolation variable:
+ 
+
+\begin{equation}
+      \text{Iso}= \frac{  \sum_{\text{trk}}^{\Delta R=0.3}p_{T}^{\text{charged hadron}}+\sum_{\text{ecal}}^{\Delta R=0.3}E_{T}^{\text{neutral hadron}}+\sum_{\text{hcal}}^{\Delta R=0.3}E_{T}^{\text{photons}} } {\pt} < 20\%
+\label{eq:isolation}
+\end{equation}
+The Sums run over all particle flow objects namely charged and neutral hadrons or photons \pt within a cone with a radius $\Delta R=0.3$ around the lepton.
+
+
+
+
+\section{Regions of Interest}
+\label{sec:regions}
+Searches probing the limitations of the standard model often investigate very extreme kinematic regions like very high \HT and \MHT regions. These are the most interesting regions for many models to find an excess above the SM expectation.\\
+To distinguish between SM background events and signal events including new particles, the SM processes must be predicted as precisely as possible.\\
+To validate that the background estimations are capable of predicting the background events, a control region is defined. This control region is selected according to the baseline cuts including high statistics while being dominated by SM events (the amount of expected signal events is negligible).\\
+The cuts for the most sensitive regions are always chosen to be very extreme leading to a small amount of SM events. The search regions used by this analysis differ only by the \HT and \MHT selection. All regions have been chosen to be exclusive in \HT and \MHT to make them statistical independent for the limit setting procedure. 
+Table~\ref{tab:regions} lists the baseline selection and all the search regions. 
+
+\begin{table}[hbt]
+\fontsize{10 pt}{1.2 em}
+\selectfont
+\begin{centering}
+\caption[]{
+This table lists all used regions (numbered from 1 to 14) defined by ranges in \HT and \MHT.   \label{tab:regions}} 
+
+\hspace*{-4ex}
+\begin{tabular}{c|cc}
+&\HT (GeV)& \MHT (GeV)			\\
+
+\hline
+baseline&500\ldots&200\ldots				\\
+\hline 
+1&500\ldots 800& 200 \ldots 350		\\
+2&500\ldots 800& 350 \ldots 500		\\	
+3&500\ldots 800& 500 \ldots 600		\\
+4&500\ldots 800& 600 \ldots		\\
+\hline 
+5&800\ldots 1000& 200 \ldots 350		\\
+6&800\ldots 1000& 350 \ldots 500		\\
+7&800\ldots 1000& 500 \ldots 600		\\
+8&800\ldots 1000& 600 \ldots		\\
+\hline 
+9&1000\ldots 1200& 200 \ldots 350		\\
+10&1000\ldots 1200& 350 \ldots 500		\\
+11&1000\ldots 1200& 500 \ldots		\\
+\hline 
+12&1200\ldots 1400& 200 \ldots 350		\\
+13&1200\ldots 1400& 350 \ldots		\\
+\hline 
+14&1400\ldots& 200 \ldots			\\
+\end{tabular}
+\par\end{centering}
+\end{table}
+
+
+\section{Data and simulated event samples}
+\label{sec:samples}
+In 2011 the LHC and the CMS detector have performed extraordinary well resulting in a collected luminosity of \lumi. A suit of \HT and \HT\-\MHT cross-trigger was used to collect the data for this analysis. All datasets are reconstructed using {\tt CMSSW\_4\_2\_X}.\\
+Tests and validation of the lost-lepton method were done on different simulated event samples, called Monte Carlo (MC) samples, listed in Tab.~\ref{tab:MC_samples} which were reweighted according to the pileup distribution obtained from the collected \lumi of data.
+The background estimation was done on the \lumi of the full 2011 dataset listed in Tab.~\ref{tab:datasamples}. 
+%From monitoring the detector the run numbers for which the detector was working correctly are identified.
+
+\clearpage
+\begin{table}[hbt]
+\fontsize{10 pt}{1.2 em}
+\selectfont
+\begin{centering}
+\caption[]{This table lists statistics of each used MC sample. The most important samples are the \ttbar and \wpj.
+
+\label{tab:MC_samples}} 
+
+\hspace*{-4ex}
+\begin{tabular}{|c|c|c|}
+\hline
+ Event name & sample name & amount of events [million]	 \\ \hline
+ \ttbar    & TTJets\_TuneZ2\_7TeV-madgraph-tauola & 59.6\\
+ \wpj    & WJetsToLNu\_300\_HT\_inf\_TuneZ2\_7TeV-madgraph-tauola& 5.4\\ \hline
+ $Z$    & DYJetsToLL\_TuneZ2\_M-50\_7TeV-madgraph-tauola & 36.3 \\
+ $QCD$    & QCD\_Pt-15to3000\_TuneZ2\_Flat\_7TeV\_pythia6 & 11.0 \\
+ $WW$    & WW\_TuneZ2\_7TeV\_pythia6\_tauola& 4.2 \\
+ $WZ$    & WZ\_TuneZ2\_7TeV\_pythia6\_tauola& 4.3 \\
+ $ZZ$    & ZZ\_TuneZ2\_7TeV\_pythia6\_tauola& 4.2\\ \hline
+\end{tabular}
+\par\end{centering}
+\end{table}
+\begin{table}[htdp]
+%%\fontsize{8 pt}{1.2 em}
+%%\selectfont
+\caption{2011 7 TeV $pp$ collision datasets used for the analysis.
+Total integrated luminosity is $\lumi$.
+%%\FIXME{The table to be updated to $880\pbinv$.}
+}
+
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+Dataset & Dataset   & Lumi           \\
+        & run range &  $(fb^{-1})$   \\
+\hline
+/HT/Run2011A-May10ReReco-v1 & 160404--163869 &  0.22 \\
+/HT/Run2011A-PromptReco-v4  & 165088--167913 &  0.95 \\
+/HT/Run2011A-05Aug2011-v1   & 170249--172619 &  0.39 \\
+/HT/Run2011A-PromptReco-v6  & 172620--173692 &  0.71 \\
+/HT/Run2011B-PromptReco-v1  & 175832--180252 &  2.71 \\
+\hline
+Total                       & 160404--180252 &  4.98 \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:datasamples}
+\end{table}

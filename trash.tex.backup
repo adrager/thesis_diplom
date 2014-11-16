@@ -1,0 +1,29 @@
+\section{To be included later}
+
+coming from analysis::
+The here presented method has been developed and used in the context of a SUSY search at the CMS detector %FIXME ref auf section in der RA2 discutiert wird eingefuerht oder so
+but can also be used for many other analyses including backgrounds arising from leptons.
+
+For the event selection particle flow reconstructed physics objects are used.  ref auf sec 4.1
+
+
+from Control sample
+
+To predict the background arising from these not found leptons a control sample (CS) is selected. The control sample is selected by applying all cuts discussed in sec. \ref{sec:event_selection} except the lepton veto. Instead one $\mu$ in the detector acceptance and fulfilling all isolation and reconstruction criteria defined in Sec.\ref{sec:event_selection} is required.\\
+
+
+MT cut
+
+The distribution in \mt for an example SUSY signal point (the LM4 benchmark point) is shown in figure \ref{fig:mt_LM5_baseline} together with the selection from \ttbar and \wpj. The fraction of events coming from the example signal point are distributed over many 100 \gev. The cut at 100\gev removes already for the baseline selection half of the example signal contamination while reducing the CS only by 11\%.  The efficiency of signal contamination reduction increases even further for higher \MHT cuts while the fraction of real control sample reduction is rather constant.
+Since signal contamination leads to an over estimation of the background and a reduction of the sensitivity to new particles the introduction of the \mt cut increases the capability of the analysis of finding new particles and to set limits.
+
+
+
+
+Appendix add plot for acceptance closer pileup
+
+
+
+
+
+

@@ -1,0 +1,175 @@
+% ---------------------------------------------------------------------------------
+% Main tex file
+% $Id: Thesis.tex,v 1.2 2012/02/04 22:54:40 matsch Exp $
+
+\documentclass[
+a4,
+oneside,
+headsepline,     % Line under page header
+normalheadings,
+openany,
+numbers=noenddot % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
+]{scrreprt} %report scrreprt
+\setlength{\textwidth}{15cm}
+\setlength{\textheight}{22.4cm}
+%\oddsidemargin -0.1cm
+%\evensidemargin 0.6cm
+
+\usepackage[automark,headsepline]{scrpage2}
+
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead{\headmark}
+\ohead{\pagemark}
+\cfoot{}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Alter some LaTeX defaults for better treatment of figures,
+% from http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html
+% See p.105 of "TeX Unbound" for suggested values.
+% See pp. 199-200 of Lamport's "LaTeX" book for details.
+% General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+% Parameters for TEXT pages (not float pages):
+%\setcounter{topnumber}{2}
+%\setcounter{bottomnumber}{2}
+%\setcounter{totalnumber}{4}     % 2 may work better
+%\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+% Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+% remember to use [htp] or [htpb] for placement
+
+\input{newcommand}
+
+
+
+
+
+\usepackage{amsfonts}
+\usepackage{amsmath}  % Correct size switching in mathmode when using \text{} instead of \textrm{}
+\usepackage{amssymb} 
+\usepackage{amstext} 
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\usepackage{rotating}
+
+
+%%%%%%%%%%%% ALL chapters
+
+%% definition of commands for latex
+\input{definitions.tex}
+
+\title{Estimation of lost leptons from \ttbar and \wpj events at the cms detector}
+\author{Arne-Rasmus Dr\"ager}
+
+
+%% config stuff
+% pdflatex packages
+\usepackage[pdftex]{hyperref}
+\hypersetup{bookmarks=true}
+\hypersetup{unicode=true}
+\hypersetup{colorlinks=true,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black}
+\hypersetup{pdftitle={Search for Supersymmetry in All-Hadronic Final States at CMS}}
+\hypersetup{pdfauthor={Arne-Rasmus Dr\"ager}}
+
+
+%%%% start of the thesis
+
+\begin{document}
+\maketitle
+\tableofcontents
+\listoffigures
+\chapter{Introduction}
+\input{introduction/introduction.tex}
+\label{sec:introduction}
+\clearpage
+
+\chapter{Theory}
+\input{theory/theory.tex}
+\label{sec:theory}
+
+
+
+
+
+\clearpage
+
+\chapter{The LHC and the CMS}
+\input{detector/detector.tex}
+\label{sec:detector}
+\clearpage
+
+\chapter{Analyse}
+\input{analyse/analyse.tex}
+\label{sec:analyse}
+\clearpage
+
+\chapter{Lost electrons and muons from \ttbar and \wpj events}
+\input{lostlepton/lostlepton.tex}
+\label{sec:lostlepton}
+\clearpage
+
+\chapter{A search for new physcis taking advantage of the lost-lepton method }
+\input{results/ra2.tex}
+\label{sec:ra2}
+\clearpage
+
+\chapter{Conclusion and outlook}
+\input{results/conclusion.tex}
+\label{sec:conclusion}
+
+\chapter{Appendix}
+\input{appendix/appendix.tex}
+\label{sec:appendix}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%% end not for the thesis
+
+%% commands
+
+
+
+
+
+
+
+\cleardoublepage
+\phantomsection
+%\renewcommand
+\addcontentsline{toc}{section}{Bibliography}
+\bibliographystyle{lucas_unsrt}
+\bibliography{thesis}
+
+
+
+
+
+\end{document}
+

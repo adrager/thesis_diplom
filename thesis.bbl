@@ -1,0 +1,311 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{tevatronPlots:2010}
+Tevatron, ``TeVatron Feynman Diagrams''.
+
+\bibitem{AN:2012}
+CMS, ``Inclusive search for new physics at CMS with the jets and missing
+  momentum signature'',.
+
+\bibitem{ATLAS-CONF-2012-019}
+{ ATLAS} Collaboration, ``An update to the combined search for the Standard
+  Model Higgs boson with the ATLAS detector at the LHC using up to 4.9\fbinv of
+  $pp$ collision data at \mbox{$\sqrt{s} = 7\tev$}'', {\em ATLAS Note} {\bf
+  \href{http://cdsweb.cern.ch/record/1430033}{ATLAS-CONF-2012-019}} (2012).
+
+\bibitem{CMS-PAS-HIG-12-008}
+{ CMS} Collaboration, ``Combination of SM, SM4, FP Higgs boson searches'', {\em
+  CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1429928}{CMS-PAS-HIG-12-008}} (2012).
+
+\bibitem{bib:TevatronHiggs:2011cb}
+{TEVNPH (Tevatron New Phenomina and Higgs Working Group), CDF and D0
+  Collaborations}, ``{Combined CDF and D0 Upper Limits on Standard Model Higgs
+  Boson Production with up to 8.6\fbinv of Data}'',
+  \href{http://www.arXiv.org/abs/1107.5518}{{\tt arXiv:1107.5518}}.
+2011. CDF Note 10606. D0 Note 6226.
+  \href{http://tevnphwg.fnal.gov/results/SM_Higgs_Summer_11/}{FERMILAB-CONF-11%
+-354-E}. Sumitted to the EPS 2011 Conference.
+%%CITATION = ARXIV:1107.5518;%%.
+
+\bibitem{bib:Schmuser:FeynmanGraphs}
+P.~Schm{\"u}ser, ``Feynman-Graphen und Eichtheorien f{\"u}r
+  Experimentalphysiker''.
+\newblock Lecture Notes in Physics. Springer, Berlin, Heidelberg, New York,
+  London, Paris, Tokyo, 1988.
+\newblock ISBN 0-387-18797-9.
+
+\bibitem{bib:LEPEWKWG:ZPolse2005}
+{The ALEPH, DELPHI, L3, OPAL, SLD Collaborations, the LEP Electroweak Working
+  Group, the SLD Electroweak and Heavy Flavour Groups}, ``{Precision
+  Electroweak Measurements on the Z Resonance}'', {\em Phys. Rept.} {\bf 427}
+  (2006) 257,
+\href{http://www.arXiv.org/abs/hep-ex/0509008}{{\tt arXiv:hep-ex/0509008}}.
+%%CITATION = HEP-EX 0509008;%%.
+
+\bibitem{bib:CombinedHERA:2009wt}
+{ H1 and ZEUS} Collaboration, ``{Combined Measurement and QCD Analysis of the
+  Inclusive $e^{\pm}p$ Scattering Cross Sections at HERA}'', {\em JHEP} {\bf
+  01} (2010) 109, \href{http://www.arXiv.org/abs/0911.0884}{{\tt
+  arXiv:0911.0884}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2010)109}{{\tt
+  doi:10.1007/JHEP01(2010)109}}.
+%%CITATION = 0911.0884;%%.
+
+\bibitem{PhysRevLett.13.508}
+P.~W. Higgs, ``Broken Symmetries and the Masses of Gauge Bosons'', {\em Phys.
+  Rev. Lett.} {\bf 13} (1964) 508 -- 509.
+  \href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{{\tt
+  doi:10.1103/PhysRevLett.13.508}}.
+
+\bibitem{Bertone2005279}
+G.~Bertone, D.~Hooper, and J.~Silk, ``Particle dark matter: evidence,
+  candidates and constraints'', {\em Physics Reports} {\bf 405} (2005),
+  no.~5-6, 279 -- 390.
+  \href{http://dx.doi.org/10.1016/j.physrep.2004.08.031}{{\tt
+  doi:10.1016/j.physrep.2004.08.031}}.
+
+\bibitem{bib:Aitchison:Susy}
+I.~Aitchison, ``Supersymmetry in Particle Physics -- An Elementary
+  Introduction''.
+\newblock Cambridge University Press, 2007.
+\newblock ISBN 978-0-521-88023-7.
+
+\bibitem{Ahmed:2003sy}
+{ SNO Collaboration} Collaboration, ``{Constraints on nucleon decay via
+  'invisible' modes from the Sudbury Neutrino Observatory}'', {\em
+  Phys.Rev.Lett.} {\bf 92} (2004) 102004,
+  \href{http://www.arXiv.org/abs/hep-ex/0310030}{{\tt arXiv:hep-ex/0310030}}.
+\href{http://dx.doi.org/10.1103/PhysRevLett.92.102004}{{\tt
+  doi:10.1103/PhysRevLett.92.102004}}.
+%%CITATION = HEP-EX/0310030;%%.
+
+\bibitem{PhysRevLett.102.141801}
+{ Super-Kamiokande} Collaboration, ``Search for Proton Decay via $p\rightarrow
+  e^{+}\pi^{0}$ and $p\rightarrow\mu^{+}\pi^{0}$ in a Large Water Cherenkov
+  Detector'', {\em Phys. Rev. Lett.} {\bf 102} (2009) 141801.
+  \href{http://dx.doi.org/10.1103/PhysRevLett.102.141801}{{\tt
+  doi:10.1103/PhysRevLett.102.141801}}.
+
+\bibitem{D0Limits}
+{D0 Collaboration, Abazov et al.}, ``Search for squarks and gluinos in events
+  with jets and missing transverse energy using 2.1\fbinv of \mbox{$p\bar{p}$}
+  collision data at \mbox{$\sqrt{s} = 1.96\tev$}'', {\em Phys. Lett.} {\bf B
+  660} (2008) 449, \href{http://www.arXiv.org/abs/0712.3805}{{\tt
+  arXiv:0712.3805}}.
+
+\bibitem{CDFLimits}
+{CDF Collaboration, Altonen et al.}, ``{The CDF exclusion region in the
+  $m_{1/2}$ vs. $m_{0}$ plane}'', {\em Phys. Rev. Lett} {\bf 102} (2009)
+  121801, \href{http://www.arXiv.org/abs/011.2512}{{\tt arXiv:011.2512}}.
+
+\bibitem{L3SUSY}
+{ L3} Collaboration, ``Search for Scalar Leptons and Scalar Quarks at {LEP}'',
+  {\em Phys. Lett.} {\bf B 580} (2004) 37,
+  \href{http://www.arXiv.org/abs/hep-ex/0310007}{{\tt arXiv:hep-ex/0310007}}.
+  See also references therein.
+\href{http://dx.doi.org/10.1016/j.physletb.2003.10.010}{{\tt
+  doi:10.1016/j.physletb.2003.10.010}}.
+%%CITATION = HEP-EX/0310007;%%.
+
+\bibitem{1748-0221-3-08-S08001}
+L.~Evans and P.~Bryant, ``LHC Machine'', {\em Journal of Instrumentation} {\bf
+  3} (2008), no.~08, S08001.
+  \href{http://dx.doi.org/10.1088/1748-0221/3/08/S08001}{{\tt
+  doi:10.1088/1748-0221/3/08/S08001}}.
+
+\bibitem{Bruning:782076}
+O.~S. Br\"uning, P.~Collier, P.~Lebrun{ et~al.}, ``LHC Design Report'', volume
+  1: The LHC Main Ring.
+\newblock CERN, Geneva, 2004.
+\newblock \href{http://cdsweb.cern.ch/record/782076}{CERN-2004-003-V-1}.
+
+\bibitem{ipac11:lamont}
+M.~Lamont, ``The LHC from Commissioning to Operation'', in {\em Proceedings of
+  the 2nd International Particle Accelerator Conference IPAC11},
+  C.~Petit-Jean-Genaz, ed., pp.~11 -- 15.
+\newblock San Sebasti\'an, Spain, 2011.
+\newblock \url{http://www.jacow.org/}.
+
+\bibitem{det::ATLAS}
+{ ATLAS} Collaboration, ``{The ATLAS Experiment at the CERN Large Hadron
+  Collider}'', {\em JINST} {\bf 3} (2008) S08003.
+\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08003}{{\tt
+  doi:10.1088/1748-0221/3/08/S08003}}.
+%%CITATION = JINST,3,S08003;%%.
+
+\bibitem{bib:cmsptdr1}
+{ CMS} Collaboration, ``CMS Detector Performance and Software'', volume~1 of
+  {\em CMS Physics Technical Design Report}.
+\newblock CERN, Geneva, 2006.
+\newblock \href{http://cdsweb.cern.ch/record/922757}{CMS-TDR-008-1.
+  CERN-LHCC-2006-001}.
+
+\bibitem{det::LHCb}
+{ LHCb} Collaboration, ``{The LHCb Detector at the LHC}'', {\em JINST} {\bf 3}
+  (2008) S08005.
+\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08005}{{\tt
+  doi:10.1088/1748-0221/3/08/S08005}}.
+%%CITATION = JINST,3,S08005;%%.
+
+\bibitem{det::ALICE}
+{ ALICE} Collaboration, ``{The ALICE experiment at the CERN LHC}'', {\em JINST}
+  {\bf 3} (2008) S08002.
+\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08002}{{\tt
+  doi:10.1088/1748-0221/3/08/S08002}}.
+%%CITATION = JINST,3,S08002;%%.
+
+\bibitem{CMS-PAS-EWK-11-001__}
+{ CMS} Collaboration, ``Absolute Calibration of Luminosity Measurement at CMS:
+  Summer 2011 Update'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1376102}{CMS-PAS-EWK-11-001}} (2011).
+
+\bibitem{Chatrchyan:2008zzk}
+{ CMS} Collaboration, ``{The CMS experiment at the CERN LHC}'', {\em JINST}
+  {\bf 3} (2008) S08004.
+\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08004}{{\tt
+  doi:10.1088/1748-0221/3/08/S08004}}.
+%%CITATION = JINST,3,S08004;%%.
+
+\bibitem{bib:cmstdr:tracker}
+{ CMS} Collaboration, ``The CMS tracker system project'', volume~5 of {\em
+  Technical Design Report CMS}.
+\newblock CERN, Geneva, 1997.
+\newblock \href{http://cdsweb.cern.ch/record/368412}{CMS-TDR-005.
+  CERN-LHCC-98-006}.
+
+\bibitem{CMS-PAS-TRK-10-005}
+{ CMS} Collaboration, ``Tracking and Primary Vertex Results in First 7\tev
+  Collisions'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1279383}{CMS-PAS-TRK-10-005}} (2010).
+
+\bibitem{bib:cmstdr:ecal}
+{ CMS} Collaboration, ``The CMS electromagnetic calorimeter project'', volume~4
+  of {\em Technical Design Report CMS}.
+\newblock CERN, Geneva, 1997.
+\newblock \href{http://cdsweb.cern.ch/record/349375}{CMS-TDR-004.
+  CERN-LHCC-97-033}.
+
+\bibitem{bib:cmstdr:hcal}
+{ CMS} Collaboration, ``The CMS hadron calorimeter project'', volume~2 of {\em
+  Technical Design Report CMS}.
+\newblock CERN, Geneva, 1997.
+\newblock \href{http://cdsweb.cern.ch/record/357153}{CMS-TDR-002.
+  CERN-LHCC-97-031}.
+
+\bibitem{bib:cmstdr:muon}
+{ CMS} Collaboration, ``The CMS muon project'', volume~3 of {\em Technical
+  Design Report CMS}.
+\newblock CERN, Geneva, 1997.
+\newblock \href{http://cdsweb.cern.ch/record/343814}{CMS-TDR-003.
+  CERN-LHCC-97-032}.
+
+\bibitem{bib:cmstdr:trigger}
+{ CMS} Collaboration, ``CMS TriDAS project: the trigger system'', volume~6 of
+  {\em Technical Design Report CMS}.
+\newblock CERN, Geneva, 2000.
+\newblock \href{http://cdsweb.cern.ch/record/706847}{CMS-TDR-006-1.
+  CERN-LHCC-2000-038}.
+
+\bibitem{bib:trigger:summerschoollecture}
+B.~Dahmes, ``Triggers for LHC Physics'', 2011.
+\newblock
+  \href{https://indico.cern.ch/conferenceDisplay.py?confId=134623}{Lecture at
+  CERN Summer Student Programme}.
+
+\bibitem{CMS-PAS-EGM-10-005}
+{ CMS} Collaboration, ``Photon reconstruction and identification at
+  \mbox{$\sqrt{s} = 7\tev$}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1279143}{CMS-PAS-EGM-10-005}} (2010).
+
+\bibitem{CMS-PAS-EGM-10-004}
+{ CMS} Collaboration, ``Electron reconstruction and identification at
+  \mbox{$\sqrt{s} = 7\tev$}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1299116}{CMS-PAS-EGM-10-004}} (2010).
+
+\bibitem{CMS-PAS-MUO-10-002}
+{ CMS} Collaboration, ``Performance of muon identification in $pp$ collisions
+  at \mbox{$\sqrt{s} = 7\tev$}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1279140}{CMS-PAS-MUO-10-002}} (2010).
+
+\bibitem{CMS-PAS-PFT-09-001}
+{ CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
+  Performance for Jets, Taus, and $E^\text{miss}_{T}$'', {\em CMS Physics
+  Analysis Summary} {\bf CMS-PAS-PFT-09-001} (2009).
+
+\bibitem{1748-0221-6-11-P11002}
+{ CMS} Collaboration, ``{Determination of Jet Energy Calibration and Transverse
+  Momentum Resolution in CMS}'', {\em Journal of Instrumentation} {\bf 6}
+  (2011) P11002, \href{http://www.arXiv.org/abs/1107.4277}{{\tt
+  arXiv:1107.4277}}.
+\href{http://dx.doi.org/10.1088/1748-0221/6/11/P11002}{{\tt
+  doi:10.1088/1748-0221/6/11/P11002}}.
+%%CITATION = ARXIV:1107.4277;%%.
+
+\bibitem{bib:TWiki:SUS12011}
+{ CMS} Collaboration, ``Search for new physics in the multijets + missing
+  transverse energy final state in 7\tev proton-proton collisions'', {\em CMS
+  Wiki} (2012).
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsSUS12011}%
+{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsSUS12011, Topic
+  revision: r2}.
+
+\bibitem{bib:berger}
+C.~Berger, ``Elementarteilchenphysik: Von den Grundlagen zu den modernen
+  Experimenten''.
+\newblock Springer-Lehrbuch. Springer, Berlin, Heidelberg, New York, 2002.
+\newblock ISBN 3-540-41515-7.
+
+\bibitem{bib:phd:jan}
+J.~Thomsen, ``Search for Supersymmetry in the Hadronic Channel with Data from
+  the CMS Experiment''.
+\newblock PhD thesis, Universit\"at Hamburg, Hamburg, Germany, 2012.
+
+\bibitem{Bourilkov:2006cj}
+D.~Bourilkov, R.~C. Group, and M.~R. Whalley, ``{LHAPDF: PDF use from the
+  Tevatron to the LHC}'',
+\href{http://www.arXiv.org/abs/hep-ph/0605240}{{\tt arXiv:hep-ph/0605240}}.
+%%CITATION = HEP-PH/0605240;%%.
+
+\bibitem{electroweak:2010}
+E.~groupe CMS, ``Electroweak utilities for MC corrections and systematics
+  evaluation''.
+
+\bibitem{bib:HERA:pdf}
+{ H1 and ZEUS} Collaboration, ``{Combined Measurement and QCD Analysis of the
+  Inclusive $e^{\pm}p$ Scattering Cross Sections at HERA}'', {\em JHEP} {\bf
+  1001} (2010) 109, \href{http://www.arXiv.org/abs/0911.0884}{{\tt
+  arXiv:0911.0884}}. \href{http://dx.doi.org/10.1007/JHEP01(2010)109}{{\tt
+  doi:10.1007/JHEP01(2010)109}}.
+
+\bibitem{bib:cteq:web}
+{ CTEQ} Collaboration, ``The Coordinated Theoretical-Experimental Project on
+  QCD'', 2011.
+\newblock \url{http://cteq.org}.
+
+\bibitem{CMS-PAS-SUS-11-004}
+{ CMS} Collaboration, ``Search for supersymmetry in all-hadronic events with
+  missing energy'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1378478/}{CMS-PAS-SUS-11-004}} (2011).
+
+\bibitem{0954-3899-28-10-313}
+A.~L. Read, ``Presentation of search results: the $CL_{\text{s}}$ technique'',
+  {\em Journal of Physics G: Nuclear and Particle Physics} {\bf 28} (2002),
+  no.~10, 2693 -- 2704.
+  \href{http://dx.doi.org/10.1088/0954-3899/28/10/313}{{\tt
+  doi:10.1088/0954-3899/28/10/313}}.
+
+\bibitem{Thomas1999435}
+T.~Junk, ``Confidence level computation for combining searches with small
+  statistics'', {\em Nuclear Instruments and Methods in Physics Research
+  Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}
+  {\bf 434} (1999), no.~2-3, 435 -- 443.
+  \href{http://dx.doi.org/10.1016/S0168-9002(99)00498-2}{{\tt
+  doi:10.1016/S0168-9002(99)00498-2}}.
+
+\bibitem{Beenakker:1996ed}
+W.~Beenakker, R.~Hopker, and M.~Spira, ``{PROSPINO: A Program for the
+  production of supersymmetric particles in next-to-leading order QCD}'',
+  \href{http://www.arXiv.org/abs/hep-ph/9611232}{{\tt arXiv:hep-ph/9611232}}.
+
+\end{thebibliography}\endgroup

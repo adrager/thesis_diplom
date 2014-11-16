@@ -1,0 +1,46 @@
+% This file was created with JabRef 2.7.2.
+% Encoding: UTF-8
+
+@ARTICLE{Abe:1995hr,
+  author = {Abe, F. and others},
+  title = {{Observation of top quark production in $\bar{p}p$ collisions}},
+  journal = {Phys.Rev.Lett.},
+  year = {1995},
+  volume = {74},
+  pages = {2626-2631},
+  archiveprefix = {arXiv},
+  collaboration = {CDF Collaboration},
+  doi = {10.1103/PhysRevLett.74.2626},
+  eprint = {hep-ex/9503002},
+  owner = {adraeger},
+  primaryclass = {hep-ex},
+  reportnumber = {FERMILAB-PUB-95-022-E, CDF-PUB-TOP-PUBLIC-3040, ANL-HEP-PR-95-44},
+  slaccitation = {%%CITATION = HEP-EX/9503002;%%},
+  timestamp = {2012.04.10}
+}
+
+@ARTICLE{Martin:1997ns,
+  author = {Martin, Stephen P.},
+  title = {{A Supersymmetry primer}},
+  year = {1997},
+  archiveprefix = {arXiv},
+  eprint = {hep-ph/9709356},
+  owner = {adraeger},
+  primaryclass = {hep-ph},
+  slaccitation = {%%CITATION = HEP-PH/9709356;%%},
+  timestamp = {2012.04.10}
+}
+
+@ARTICLE{Spiesberger:2000ks,
+  author = {Spiesberger, H. and Spira, M. and Zerwas, P.M.},
+  title = {{The Standard model: Physical basis and scattering experiments}},
+  year = {2000},
+  note = {To be published in 'Scattering', P. Sabatier, editor. Academic Press,
+	London, 2000},
+  archiveprefix = {arXiv},
+  eprint = {hep-ph/0011255},
+  primaryclass = {hep-ph},
+  reportnumber = {DESY-T-00-01, MZ-TH-00-53, PSI-PR-00-17},
+  slaccitation = {%%CITATION = HEP-PH/0011255;%%}
+}
+

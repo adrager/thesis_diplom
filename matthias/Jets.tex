@@ -1,0 +1,751 @@
+% ---------------------------------------------------------------------------------
+% Chapter: Jets
+% $Id: Jets.tex,v 1.2 2012/02/04 22:54:40 matsch Exp $
+
+
+%2 Jets are the experimental signatures of quarks and gluons produced in high-energy processes
+%3 such as hard scattering of partons in proton-proton collisions. The detailed understanding of
+%4 both the jet energy scale and of the transverse momentum resolution is of crucial importance
+%5 for many physics analyses, and it is an important component of the systematic uncertainty
+
+% ---------------------------------------------------------------------------------
+\section{Jets}
+
+% General phenomenology and definition: confinement bla, origin of partons, algorithm
+
+% Jet algorithms and recombination schemes
+% ---------------------------------------------------------------------------------
+% \subsection{Jet Algorithms}
+% Quantitative definition by jet algorithm
+% \begin{itemize}
+% \item Assignment of objects to jet (\textit{Recombination scheme})
+% \item Suitable summing of kinematic quantities
+% \end{itemize}
+% Algorithms at CMS
+
+% \begin{itemize}
+% \item Confinement, fragmentation, hadronisation (merge with MC description)
+% \item Jet definition has to be valid for measurements, generator
+%   particles, particles from calculations (snow-mass accord)
+% \item Origin of jets: parton in proton, radiated gluon, or heavy
+%   particle decay; ambitugities: collimated quarks from heavy-particle decay
+% \item Dijet production in $pp$ collisions
+%   \begin{itemize}
+%   \item Factorisation theorem
+%   \item Plot with LHC cross sections, point out size of QCD
+%   \item Note: say dijet but in reality always additional jets
+%   \item will say `both' jets in an event, mean leading two jets
+%   \end{itemize}
+% \item Jet algorithms
+% \item Jet types at CMS: iterative-cone
+% \end{itemize}
+% (from jme-10-011: Jets considered in this paper are reconstructed
+% using the anti-kT clustering algorithm [4] with a size parameter R =
+% 0.5 in the eta-phi space, implemented in the FastJet
+% package~\cite{Cacciari200657,Cacciari:2011ma,bib:fastJetWebPage}.)
+
+% Jets closest to partons as one can get physically.
+
+% In the following, all jets in an event are understood to be ordered in \pt starting with the highest \pt.
+
+% \begin{figure}[!htb]
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{figures/jets/d09-158f18b.pdf}
+%   \caption{
+% %    Parton distribution functions of the proton as a function of the proton momentum fraction x. The gluon and sea quark distributions are scaled down by a factor 0.05.
+% %    The parton distribution functions from HERAPDF1.0, xuv, xdv, xS = 2x( ¯U + ¯D), xg, at Q2 = 1.9 GeV2 (top) and Q2 = 10 GeV2 (bottom). The gluon and sea distributions are scaled down by a factor 20. The experimental, model and parametrisation uncertainties are shown separately.
+%     \cite{bib:HERA:pdf}
+%     \todo{revise caption}
+%   }
+%   \label{fig:Jets:EvtSimulation:PUReweighting}
+% \end{figure}
+
+% \begin{figure}[!htb]
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{figures/jets/PTDR1_Figure_011-001.pdf}
+%   \caption{\todo{add caption}
+%     % Inclusive jet cross section vs. jet transverse energy at the LHC compared with the Tevatron [257]. The cross section is 7 orders of magnitude greater at the LHC than at the Tevatron kinematic limit, and the luminosity will also be more than 2 orders of magnitude greater.
+%     \cite{bib:cmsptdr1}
+% }
+% \end{figure}
+
+% \begin{figure}[!htb]
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{figures/jets/PTDR1_Figure_011-002.pdf}
+%   \caption{\todo{add caption}
+%    \cite{bib:cmsptdr1}
+% }
+% \end{figure}
+
+  
+
+% \todo{have been introduced in theory chapter, merge!}
+
+% A jet is a narrow cone of hadrons and other particles produced by the hadronisation of a quark or gluon in a particle physics or heavy ion experiment. Because of QCD confinement, particles carrying a colour charge, such as quarks, cannot exist in free form. Therefore they fragment into hadrons before they can be directly detected, becoming jets. These jets must be measured in a particle detector and studied in order to determine the properties of the original quark.
+
+% In relativistic heavy ion physics, jets are important because the originating hard scattering is a natural probe for the QCD matter created in the collision, and indicate its phase. When the QCD matter undergoes a phase crossover into quark gluon plasma, the energy loss in the medium grows significantly, effectively quenching the outgoing jet.
+
+% Example of jet analysis techniques are:
+
+%     jet reconstruction (e.g., kT algorithm, cone algorithm)
+%     jet correlation
+%     flavour tagging (e.g., b-tagging).
+
+%Example of jet fragmentation models are:
+
+%    Lund string model
+
+%Jets are produced in QCD hard scattering processes, creating high transverse momentum quarks or gluons, or collectively called partons in the partonic picture.
+
+%The probability of creating a certain set of jets is described by the jet production cross section, which is an average of elementary perturbative QCD quark, antiquark, and gluon processes, weighted by the parton distribution functions. For the most frequent jet pair production process, the two particle scattering, the jet production cross section in a hadronic collision is given by
+
+%\sigma_{ij \rightarrow k} = \sum_{i, j} \int d x_1 d x_2 d\hat{t} f_i^1(x_1, Q^2) f_j^2(x_2, Q^2) \frac{d\hat{\sigma}_{ij \rightarrow k}}{d\hat{t}},
+
+%with
+
+%    x, Q2: longitudinal momentum fraction and momentum transfer
+ %   \hat{\sigma}_{ij \rightarrow k}: perturbative QCD cross section for the reaction ij â†’ k
+%    f_i^a(x, Q^2): parton distribution function for finding particle species i in beam a.
+
+%Elementary cross sections \hat{\sigma} are e.g. calculated to the leading order of perturbation theory in Peskin & Schroeder (1995), section 17.4. A review of various parameterizations of parton distribution functions and the calculation in the context of Monte Carlo event generators is discussed in T. SjÃ¶strand et al. (2003), section 7.4.1.
+
+%Perturbative QCD calculations may have colored partons in the final state, but only the colorless hadrons they ultimately produce are observed experimentally. Thus, to describe what is observed in a detector as a result of a given process, all outgoing colored partons must first undergo parton showering and then combination of the produced partons into hadrons. The terms fragmentation and hadronization are often used interchangeably in the literature to describe soft QCD radiation, formation of hadrons, or both processes together.
+
+%As the parton which was produced in a hard scatter exits the interaction, the strong coupling constant will increase with its separation. This increases the probability for QCD radiation, which is predominantly shallow-angled with respect to the originating parton. Thus, one parton will radiate gluons, which will in turn radiate qq pairs and so on, with each new parton nearly collinear with its parent. This can be described by convolving the spinors with fragmentation functions P_{ji}\!\left(\frac{x}{z}, Q^2\right), in a similar manner to the evolution of parton density functions. This is described by a Dokshitzer-Gribov-Lipatov-Altarelli-Parisi (DGLAP) type equation
+
+%\frac{\partial}{\partial\ln Q^2} D_{i}^{h}(x, Q^2) = \sum_{j} \int_{x}^{1} \frac{dz}{z} \frac{\alpha_S}{4\pi} P_{ji}\!\left(\frac{x}{z}, Q^2\right) D_{i}^{h}(z, Q^2)
+
+
+%Parton showering produces partons of successively lower energy, and must therefore exit the region of validity for perturbative QCD. Phenomenological models must then be applied to describe the length of time when showering occurs, and then the combination of colored partons into bound states of colorless hadrons, which is inherently not-perturbative. One example is the Lund String Model, which is implemented in many modern event generators.
+
+
+
+% ---------------------------------------------------------------------------------
+\section{Object Reconstruction and Particle Identification} \label{sec:Jets:Reconstruction}
+% \begin{itemize}
+% \item Signatures of different particles
+% \item Features of em, had showers, e/h
+% \item Particle-flow
+% \item Definition: particle-level, detector-level, associated quantities have no superscript, if not denoted explicitly, means detector level
+% \item Ordering scheme in \pt, \pti{i} means ...
+% \end{itemize}
+
+%The particle flow algorithm is especially powerful in the latter part (constant relative response), because it homogenises the detector response for individual particles across different pT and η to much higher degree than the the calorimeter-only reconstruction.
+
+
+% ---------------------------------------------------------------------------------
+\section{Event Simulation} \label{sec:Jets:EvtSim}
+The simulation of particle collisions and the signatures of the subsequent particles in the detector constitutes an important tool to obtain expectations for physics properties of the collected data, such as the fraction of events from a certain process or the jet multiplicity, as well as the detector performance, such as the jet-momentum response.
+Hence, the results from simulated events frequently serve as a guideline in the development of measurement techniques and as a reference to evaluate their consistency (\textit{closure test}).
+Sometimes, certain quantities required for the interpretation of a measurement such as the geometric acceptance of the detector or the flavour composition of jets are not accessible in data, \eg due to insufficient instrumental resolution or lack of statistical precision.
+In that case, the missing information has to be obtained entirely from simulation, typically at the cost of larger systematic uncertainties though.
+
+Typical simulations involve the computation of complicated integrals which are insolvable analytically and which cannot be approximated by numerical methods on a reasonable time scale.
+Therefore, \textit{Monte Carlo} techniques are exploited which essentially perform a random sampling of the integrand~\cite{bib:MCMethod,bib:BargerPhillips}.
+The label `MC' will be frequently used in the following to denote quantities and results derived with the simulation.
+
+% ---------------------------------------------------------------------------------
+\subsection{Event Generation}
+The simulation of events is usually separated into several sequential steps.
+First, the cross section of the hard scattering process of interest is computed for which the matrix elements up to a certain order are considered.
+For instance, the programme \pythia~\cite{bib:sjostrand:pythia} calculates hard processes with two particles in the final state ($2\rightarrow2$) and \madgraph~\cite{bib:alwall:madgraph} with nine ($2\rightarrow9$).
+Hence, depending on the definition of the final-state signature, the additional emission of hard partons can be included at some extent into the simulation at matrix-element level.
+
+Subsequent higher-order QCD effects, \ie the absorption and emission of partons before (\textit{initial-state radiation}, `ISR') and after the hard interaction (\textit{final-state radiation}, `FSR'), respectively, are referred to as \textit{parton showering}.
+They cannot be computed from first principles for technical reasons because the number matrix elements increases dramatically with each order.
+More fundamentally, the energy of the involved partons decreases with increasing order and hence perturbation theory is not applicable anymore at one point due to the consequent increase of the strong coupling constant.
+Therefore, phenomenological models are used to simulate parton showering as well as the \textit{hadronisation}, \ie the ultimate formation of hadrons.
+The same is true for additional soft interactions which occur at hadron colliders between other partons in the same proton-proton collision as the hard process, and which are referred to as \textit{underlying event}.
+An advanced simulation of the showering and hadronisation process as well as the underlying event is implemented in \pythia, for example, which is commonly interfaced by other generators such as \madgraph.
+In particular the description of the underlying event is difficult and programmes have to be tuned to the conditions at a certain collider.
+The stable particles after the hadronisation are referred to as \textit{generator-level} particles, and associated quantities such as the transverse momentum will be denoted with the superscript `$\text{gen}$'.
+
+Finally, the interaction of the generator-level particles with the detector material and the resulting read-out signals are in simulated with a model of the CMS apparatus based on the \geant programme~\cite{Agostinelli2003250}.
+This model will be referred to as \textit{full simulation}.
+In certain situations when particularly large samples are required, a \textit{fast simulation} tool of the CMS detector~\cite{bib:CMS:FastSim} is used instead, which exploits a number of simplified parameterisations and hence is computationally less intensive.
+In any case, the same reconstruction methods as for data can be applied to the simulated detector output allowing for a direct comparison of the detector-level objects.
+
+
+% ---------------------------------------------------------------------------------
+\subsection{Definition of a QCD-Multijet Reference Sample}
+If not stated differently, a sample of $10\,930\,800$ QCD-multijet events is used throughout this thesis, which were generated with \pythia\fixme{version} with tune Z2\addref; the expected proton composition was obtained from the CTEQ6.6\tobechecked set of parton-density functions~\cite{PhysRevD.78.013004}.
+Events were processed through the full detector simulation.
+
+At generation, the QCD cross-section was scaled by a factor $\propto\pthat^{4.5}$, where \pthat is a scale parameter for the momentum transfer of the hard interaction.
+That way, the decrease of the event rate is softened and the statistical precision remains comparable over a large range in \pthat.
+Depending on the analysis, the events are weighted inversely such that the realistic QCD spectrum is regained as illustrated in \qfig{fig:Jets:EvtSimulation:FlatQCDSpectrum}.
+\begin{figure}[!htb]
+  \centering
+  \caption{\todo{add \pthat spectrum before and after weighting, add caption}}
+  \label{fig:Jets:EvtSimulation:FlatQCDSpectrum}
+\end{figure}
+
+In addition to the primary $pp$ collision, pile-up collisions were generated.
+Their number is distributed uniformly between zero and ten, followed by a Poissonian decrease for larger multiplicities.
+Therefore, in order to model the data, an event weight is assigned depending on the number of simulated pile-up interactions \addref.
+Since this number does not correlate with \pthat, the pile-up weight can be multiplied to the spectral weight.
+The target pile-up distribution expected for the data is depicted in \qsubfig{fig:Jets:EvtSimulation:PUReweighting}{left}.
+It is derived from the LHC machine conditions during the considered data-taking period together with the total $pp$ inelastic cross-section.
+This approach does not depend on selection effects or vertex reconstruction efficiencies which might otherwise bias the weighting if the distribution of the number of reconstructed vertices was used instead.
+\begin{figure}[!htb]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/core/ExpectedPileUpDistribution_160404-172255.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/core/Res_163337-167151_PF_NumVtx_Data_vs_CMSSimulation_EtaBin0_PtBin6_PtSoftBin5.pdf} \\
+  \end{tabular}
+  \caption{The target pile-up distribution expected for the data during the considered data-taking period (\textit{left}) and the distribution of reconstructed primary vertices after a dijet selection (\textit{right}).
+    The simulation (line), reweighted to the data pile-up conditions, is compared to the data (circles).}
+  \label{fig:Jets:EvtSimulation:PUReweighting}
+\end{figure}
+
+A cross-check of how well the pile-up profile is modelled is obtained from the distribution of the number of reconstructed primary vertices, which corresponds to the distribution of pile-up interactions up to the vertex reconstruction efficiency.
+The data is reasonably well described by the reweighted simulation as demonstrated in \qsubfig{fig:Jets:EvtSimulation:PUReweighting}{right}.
+
+The full particle-flow event reconstruction is performed on the simulated detector output.
+Detector-level jets are clustered from the reconstructed particles with the \antikt algorithm with size parameter \mbox{$R=0.5$}.
+Their four-momenta are corrected on average by applying the full chain
+of jet energy calibration factors discussed above in
+\qsec{sec:Jets:JEC}.
+Furthermore, generator-level jets are clustered by applying the algorithm to all generator-level particles.
+
+In what follows, the described sample will be referred to as `\pythia sample'.
+
+
+% ---------------------------------------------------------------------------------
+\section{Jet Energy Calibration} \label{sec:Jets:JEC}
+In general, the signal caused in the detector by stable particles originating in the $pp$ collisions does not equal the energy of the original particles.
+The purpose of the jet energy calibration is to relate the measured energy of a detector-level jet on average to the energy of the underlying particle-level jet.
+
+In \qsec{sec:Jets:JEC:Response}, a prescription is given to determine the \textit{jet response}, \ie the fraction of measured energy, from simulated events.
+Fluctuations of the jet response are discussed, and its dependence on the transverse momentum, the pseudorapidity, as well as the presence of pile-up collisions is investigated.
+Also, techniques to measure the jet response from data are described.
+Finally, in \qsec{sec:Jets:JEC:FactorisedApproach}, the approach for jet energy calibration followed by CMS is presented.
+
+
+% ---------------------------------------------------------------------------------
+\subsection{Jet Transverse Momentum Response} \label{sec:Jets:JEC:Response}
+In this thesis, the jet response is defined as the fractional signal measured in the detector for a given amount of energy of the stable particles emerging from the hadronisation of an initial parton.
+Given the kinematic constraints at a hadron collider, more specifically the \textit{jet transverse momentum response}, \resp, will be used which is understood as the ratio of the measured transverse momentum, \pt, of a jet at detector-level and the transverse momentum, \ptparticle, of the underlying particle-level jet,
+\begin{equation}
+  \label{eq:Jets:ResponseDefinition}
+  \resp = \frac{\pt}{\ptparticle} \;.
+\end{equation}
+
+The average response is denoted as \textit{jet energy scale}\footnote{Often, jet energy scale and response are used as synonyms. Here, response always refers to the relative signal generated by one individual jet.}.
+After calibration, the jet energy scale should be \mbox{$\mean{\resp} = 1$}.
+The width of the response distribution is considered as \textit{jet transverse momentum resolution}.
+Both, scale and resolution will be defined more precisely in \qsec{sec:Jets:JEC:Response:GaussianApproximation}.
+First, the determination and features of the jet response will be discussed.
+
+
+% ---------------------------------------------------------------------------------
+\subsubsection{Determination of the MC-Truth Response} \label{sec:Jets:JEC:Response:MCTruth}
+The above definition of jet response is somewhat abstract in the sense that particle-level jets are not directly accessible in data.
+In simulated events, however, the particle-level jet can be approximated by the generator-level jet with transverse momentum \ptgen and \resp can be obtained straight-forward as \mbox{$\pt/\ptgen$}.
+It will be referred to as \textit{MC-truth response} and is determined from the \pythia sample as follows.
+
+In each event, the leading two generator-level jets $g_{i}$, \mbox{$i=1,2$}, are selected, \ie the two jets with the highest \ptgen.
+To each selected $g_{i}$, the detector level jet $j_{i}$ closest in $\Delta \text{R}$ is matched, where \mbox{$\Delta\text{R} = \sqrt{(\Delta\eta(g_{i},j_{i}))^{2} + (\Delta\phi(g_{i},j_{i}))^{2}}$} denotes the distance of $g_{i}$ and $j_{i}$ in \mbox{$\eta\times\phi$} space.
+The event is discarded, if for one of the two pairs \mbox{$\Delta\text{R} > \Delta\text{R}_{\text{max}}$}.
+A value of \mbox{$\Delta\text{R}_{\text{max}} = 0.1$} has been chosen as will be motivated later in \qsec{sec:Jets:Resolution:MCTruth}.
+For each pair, the response \mbox{$\resp = \pt/\ptgen$} is recorded in intervals of \ptgen and \etagen.
+Example response distributions for two different \ptgen intervals are shown in \qfig{fig:Jets:Response:UncorrectedResponseDistribution}.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_Uncorr_Response_EtaBin0_PtBin9.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_Uncorr_ResponseLog_EtaBin0_PtBin9.pdf} \\
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_Uncorr_Response_EtaBin0_PtBin17.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_Uncorr_ResponseLog_EtaBin0_PtBin17.pdf} \\
+  \end{tabular}
+  \caption{MC-truth response distribution before application of the jet energy calibration in a low (\textit{top row}) and a medium (\textit{bottom row}) \ptgen interval on a linear (\textit{left}) and logarithmic (\textit{right}) scale.}
+  \label{fig:Jets:Response:UncorrectedResponseDistribution}
+\end{figure}
+
+A dependence of \resp on the jet's momentum and pseudorapidity is expected because in both the response and resolution of the calorimeters and tracking devices depend on the energy.
+Furthermore, the available subdetectors and their design vary depending on $\eta$, and likewise different material budgets that affect the measurement are present in front of the subdetectors.
+%\todo{Discussion as in AN-08-003 on \mbox{$\mean{\mu(\ptgen)}\approx\mu(\mean{\ptgen})$}?}
+
+Here, events were not weighted to the realistic QCD cross-section in order to ensure that the assigned statistical uncertainties reflect the actual number of generated events.
+Nonetheless, the pile-up weights are applied because the pile-up scenario impacts the response.
+However, the induced bias of the statistical uncertainties is much smaller and independent of \pt.
+
+
+
+% ---------------------------------------------------------------------------------
+\subsubsection{Components of the Jet Response} \label{sec:Jets:JEC:Response:Components}
+The response distributions in \qfig{fig:Jets:Response:UncorrectedResponseDistribution} are dominated by a Gaussian-like central region.
+In particular at low response, additional non-Gaussian components are present, which amount to about $\mathcal{O}(10^{-3}-10^{-2})$ of the bulk contribution and are denoted \textit{(non-Gaussian) tails} in the following.
+
+It should be kept in mind for the following discussion that the momenta of the considered detector-level jets are not computed from raw detector signals.
+Rather, the signals were pre-calibrated directly after read-out at the simulated hardware-level \addref.
+Moreover, the clusters entering the particle reconstruction were further calibrated as part of the particle-flow algorithm.
+
+For low \ptgen, the average response is a few percent larger than $1$.
+This is due to the presence of particles originating in pile-up interactions.
+The average additional energy clustered into jets has been measured to about 5\gev in case of eight pile-up collisions as shown in \qfig{fig:Jets:Response:OffsetMomentum}~\cite{1748-0221-6-11-P11002}.
+Consequently, limiting the number of pile-up collisions in the simulation reduces the response; the average response of jets in the same \ptgen interval from events with less than two pile-up collisions is $96\%$ as demonstrated in \qfig{fig:Jets:Response:UncorrectedResponseDistributionNoPU}.
+Since the $pp$ minimum-bias \alreadydefined{minimum-bias} cross-section is steeply decreasing with \pt, \cf \qfig{jet-cross-section}, the occurrence of high-\pt pile-up particles is rare, which minimises the absolute offset in the measured jet momentum.
+Hence, the response at larger \ptgen, with an average of $96\%$, is not visibly affected by the presence of pile-up collisions, \cf \qfig{fig:Jets:Response:UncorrectedResponseDistributionNoPU}.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.45\textwidth]{figures/jets/JME-10-011_Paper_Figure2b.pdf}
+  \caption{Average increase $\mean{p_{\text{T,offset}}}$ in the jet's reconstructed transverse-momentum due to the additionally deposited energy from instrumental noise and pile-up measured in minimum-bias events, where the pile-up conditions are characterised by the number $N_{\text{PV}}$ of reconstructed primary vertices~\cite{1748-0221-6-11-P11002}.
+The noise contribution is quoted to be less than 250\mev.
+}
+  \label{fig:Jets:Response:OffsetMomentum}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_UncorrVsLowPUVsL1Corr_Response_EtaBin0_PtBin9.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_UncorrVsLowPUVsL1Corr_Response_EtaBin0_PtBin17.pdf} \\
+  \end{tabular}
+  \caption{MC-truth response in a low (\textit{left}) and a medium (\textit{right}) \ptgen interval for uncalibrated jets in all events (\textit{solid histogram}) and in events with less than two pile-up collisions (\textit{dashed histogram}), as well as for all events but after application of the offset jet energy correction (\textit{dotted histogram}).}
+\label{fig:Jets:Response:UncorrectedResponseDistributionNoPU}
+\end{figure}
+
+% Bulk of response distribution
+The fluctuations of the response around the mean have several sources in the different subdetectors utilised for the particle-flow event reconstruction and, to a smaller extent, by the flavour composition of the QCD sample.
+Extensive discussions of various aspects of energy and momentum measurements with calorimeters and tracking devices can be found in~\cite{wigmans:calorimetry,wigmans:144} and \addref, respectively.
+
+\fixme{parts of the following discussion need to go to \qsec{sec:Jets:Reconstruction}}
+The largest contributions are due to the hadron calorimeter.
+Sampling fluctuations arise from stochastic variations of the fraction of energy deposited in the active material.
+Furthermore, a varying fraction of the energy of a hadron shower is absorbed by releasing nucleons from the detector material, and this binding energy does not contribute to the recorded signal (\textit{invisible energy} phenomenon).
+Finally, a fluctuating fraction $f_{\text{em}}$ of the shower consists of neutral pions, which decay almost instantly to photons and hence develop an electromagnetic shower.
+Since the calorimeter response to photons is very different than that to hadrons \fixme{(e/h = )}, the overall response varies depending on $f_{\text{em}}$.
+Of course, the measurement of charged hadrons is complemented with track information but in case of neutral hadrons and in the forward region, which is not covered by tracking detectors, the reconstruction has to rely on the HCAL.
+Moreover, the precision of momentum measurements from track information degrades proportionally with \pt, mainly due to geometric effects and also due to multiple scattering in the dense silicon of the tracking detector~\cite{RL1963381}.
+Additionally, the signal in all subdetectors fluctuates due to instrumental effects such as electronic noise or non-uniformities in the material.
+
+Another source is the dependence of the response on the flavour of the original parton initiating the jet, denoted as \textit{jet flavour} \alreadydefined{at an earlier stage} in the following.
+Gluons and heavy-flavour quarks (\qb, \qc) produce typically more and thus softer particles during the showering than light-flavour quarks (\qu, \qd, \qs).
+Due to the non-linearity of the calorimeters, light-flavour jets therefore have a larger response on average than other jets.
+Furthermore, the flavour composition of the QCD-multijet sample depends on \pt; gluon jets dominate at low \pt while at larger \pt more quark jets are produced.
+Since particle-flow jets are clustered from individually reconstructed particles, however, the impact of the calorimeter non-linearity is minimised and the average response differs by less than $4\%$ between the jet flavours~\cite{1748-0221-6-11-P11002}.
+
+% Origin of tails
+The more pronounced low-response tails of the distribution are mostly due to physics sources such as semi-leptonic decays of heavy-flavour quarks where the neutrinos escape undetected and thus carry away energy.
+This effect is largest for jets which originate from heavy-flavour quarks already.
+In \qfig{fig:Jets:Response:ResponseTailFlavourContributions}, the fractional contributions of the different jet flavours to the response are depicted.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_Flavour_ResponseLog_EtaBin0_PtBin9.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_Flavour_ResponseLog_EtaBin0_PtBin17.pdf} \\
+  \end{tabular}
+  \caption{MC-truth response in a low (\textit{left}) and a medium (\textit{right}) \ptgen interval for uncalibrated jets originating from partons of different flavours as indicated in the legend, where the flavour was determined using the `algorithmic definition' described in~\cite{bib:CMS:FlavourTagging}.
+    All histograms are normalised to their respective integral.
+\fixme{uncorrected jets}}
+\label{fig:Jets:Response:ResponseTailFlavourContributions}
+\end{figure}
+
+Another dominating soure is the presence of inactive channels in the electromagnetic calorimeter, which leads to mismeasurements of the deposited energy~\cite{bib:phd:sueann}.
+To a smaller extent, also the detector design contributes to the tails, because shower leakage will occur if not all the energy is deposited within instrumented regions.
+Moreover, since the calorimeters have a depth of only about 7 nuclear interaction lengths at small $|\eta|$, some of the secondary particles generated in the showers induced by hadrons with energies above about 50\gev can even traverse the apparatus (`punch-through').
+For example, in QCD-multijet events with a transverse-momentum scale of larger than 500\gev and \mbox{$\met > 200\gev$}, about $10-20\%$ of the jets in the barrel are affected by punch-through~\cite{bib:thesis:ulla}.
+While leakage usually causes low-response tails, in particular punch-through can also lead to high-response tails because shower electrons hitting the read-out photo diodes can induce signals much larger than those from scintillation photons~\cite{wigmans:144}.
+Finally, fluctuations of $f_{\text{em}}$ are generally not symmetric, and different values of $f_{\text{em}}$ will produce a different response because the hadronic calorimeter is non-compensating\alreadydefined{non-compensating}.
+
+
+% Gaussian / two-Gaussian shape, fitting technique
+% ---------------------------------------------------------------------------------
+\subsubsection{Gaussian Approximation} \label{sec:Jets:JEC:Response:GaussianApproximation}
+In order to characterise the response distribution in terms of the mean value and width of the dominating central region it is approximated by a Gaussian.
+Its mean value $\mu$ and standard deviation $\sigma$ define the jet energy scale and resolution, respectively, in this thesis.
+This corresponds to approximating the desired \mean{\pt} for a given \mean{\ptgen} by
+\begin{equation*}
+  \mean{\resp} = \left\langle\frac{\pt}{\ptgen}\right\rangle \approx \frac{\mean{\pt}}{\mean{\ptgen}} \;,
+\end{equation*}
+and likewise for the resolution.
+
+To avoid biasing the parameter values by the presence of the tails, the Gaussian is fitted in the central interval \mbox{$\mu\pm2\;\sigma$} which is determined in an iterative procedure.
+A first approximation $\mu_{1}$, $\sigma_{1}$ of the parameter values is obtained by a Gaussian fit in the interval \mbox{$\mu_{0}\pm2.5\;\sigma_{0}$}, where $\mu_{0}$ and $\sigma_{0}$ are the sample mean and standard deviation of the response distribution, respectively.
+The final values are then fitted in the interval \mbox{$\mu_{1}\pm2\;\sigma_{1}$}.
+
+Results of the fitting procedure are shown in \qfig{fig:Jets:Response:UncorrectedResponseDistributionFit} for the two example intervals.
+A $\chi^{2}$ goodness-of-fit test~\cite{bib:blobelLohrmann,bib:barlow}, which results in values of $2-5$ for $\chi^{2}$ relative to the number of degrees of freedom, clearly indicates some tension between the shape of the distribution and the chosen Gaussian parametrisation, \cf also \qfig{fig:Jets:Response:UncorrectedResponseDistributionFitChi2}.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_OneVsTwoGauss_ResponseFit_EtaBin0_PtBin9.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_OneVsTwoGauss_ResponseFit_EtaBin0_PtBin17.pdf} \\
+  \end{tabular}
+  \caption{MC-truth response (\textit{histogram}) for uncalibrated jets in a low (\textit{left}) and a medium (\textit{right}) \ptgen interval.
+    The distribution is fitted with a Gaussian (\textit{red line}) of mean $\mu$ and width $\sigma$ in the central interval \mbox{$\mu\pm\sigma$} (\textit{solid part of the line}) determined by the iterative procedure described in the text.
+    For comparison, the sum of two Gaussian with equal mean value but different widths is also fitted in the same interval (\textit{blue line}).
+  }
+\label{fig:Jets:Response:UncorrectedResponseDistributionFit}
+\end{figure}
+
+As demonstrated ibid., better agreement is obtained at low \pt when fitting the sum of two Gaussians, where both are required to have the same mean, which may be different to the mean of the one-Gaussian fit, but can have different widths and relative normalisations.
+This observation has a simple physics interpretation.
+The response distribution can be considered to consist of two distributions with different resolution, a narrow one due to the electromagnetic component and charged hadrons in a jet, where the measurement benefits from the good resolution of the tracking detector and electromagnetic calorimeter, and a broad one due to the neutral hadrons, where the measurement has to rely mostly on the hadronic calorimeter.
+This interpretation is supported by the fact that the one-Gaussian model yields a much better description in the forward region of the detector, where there is no coverage by the tracking detector \fixme{tracker up to eta 2.5} and the measurement has to be performed entirely by the calorimeters.
+\fixme{at large \pt?}
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_OneVsTwoGauss_Chi2NdofOneGauss.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_OneVsTwoGauss_Chi2NdofTwoGauss.pdf} \\
+  \end{tabular}
+  \caption{Goodness-of-fit obtained from a $\chi^{2}$ test for the fit of the response distribution with the one- (\textit{left}) and two-Gaussian (\textit{right}) model in different \ptgen and \etagen intervals.}
+\label{fig:Jets:Response:UncorrectedResponseDistributionFitChi2}
+\end{figure}
+
+Nevertheless, in order be able to work with an unambiguous definition of the average response and resolution of both jet components, in the following one Gaussian is used to parametrise the jet response distribution.
+As will be shown later in \qsec{sec:Jets:Resolution:MCTruth}, the resolution is reasonably stable \wrt to the exact choice of the fitting interval.
+
+
+% ---------------------------------------------------------------------------------
+\subsubsection{Discussion of the Jet Energy Scale} \label{sec:Jets:JEC:Response:JetEnergyScale}
+% Description of jet energy scale
+The jet energy scale, defined by the mean value of the Gaussian fitted to the \resp distribution, is shown in \qfig{fig:Jets:Response:MCJES} as a function of \ptgen and \etagen in two selected intervals.
+It features little energy dependence since jets were clustered from individual particles reconstructed by the particle-flow algorithm and hence effects due to the non-linear calorimeter response can be avoided.
+Furthermore, the scale is close to unity, also in the forward region, because the particle-flow objects were pre-calibrated.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_UncorrVsL1VsCorr_MeanResponse_EtaBin0.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/TMP_JEC11_V1_AK5_PFFastjet_ResponseVsEta_GaussFitMean_GenJetPt1.pdf} \\
+  \end{tabular}
+  \caption{\todo{use current plot, add caption}}
+  \label{fig:Jets:Response:MCJES}
+\end{figure}  
+
+The impact of pile-up is clearly visible in \qsubfig{fig:Jets:Response:MCJES}{left}.
+Above \ptgen of 200\gev, the average response is about $95\%$.
+Below, it is as large as $105\%$ at \mbox{$\ptgen = 20\gev$} in the presence of pile-up, while it drops to about $93\%$ after its compensation by the offset correction, \cf \qsec{sec:Jets:JEC:FactorisedApproach}.
+As can be observed in \qsubfig{fig:Jets:Response:MCJES}{right}, the jet energy scale features a slight dip at \mbox{$|\etagen| \approx 3$}, which is attributed to the transition between the endcap and forward calorimetry in this region.
+
+% Event selection in gen-quantities to avoid biases
+The jet energy scale has been obtained by selecting events and fitting the response distributions in intervals of generator-level quantities.
+It is important to notice that \resp would have been biased had detector-level quantities been used instead.
+Selecting events in intervals of measured \pt leads to migration effects at the boundaries due to the finite jet \pt resolution because there are jets that fluctuate either into or out of the interval.
+Additionally, because of the monotonically decreasing jet-\pt spectrum, in any interval there are more jets that fluctuated high than jets that fluctuated low in \pt, and hence the selected sample is biased towards jets of lower \ptgen that fluctuated high in the detector.
+This is illustrated in \qfigs{fig:App:Jets:ResponseMeasurementProcedure}{fig:App:Jets:Migration} in Appendix~\ref{sec:App:Jets}.
+
+Migration effects also occur \wrt $\eta$ but to a smaller extent because the relative resolution of typically \mbox{$0.5-3\%$}~\cite{CMS-PAS-JME-10-003} is more precise and the spetrum is more flat for $\eta$ than for \pt.
+Even more, the impact on the response is much smaller because the definition of \resp does not include $\eta$ directly but there is only a certain functional dependence on it.
+
+
+
+% Response measurement in data
+% ---------------------------------------------------------------------------------
+\subsubsection{Measurement of the Jet Response in Data} \label{sec:Jets:JEC:}
+CMS employs several techniques to measure the jet energy scale from data~\cite{1748-0221-6-11-P11002}.
+
+An obvious approach is to determine the response for events where the jet momentum is balanced in the transverse plane against the momentum of a well measured reference object.
+Two such methods are being performed, one using photon+jet events and the other $Z$+jet events where the $Z$ boson decays into electrons or muons.
+Both are based on the superior energy resolution of the reference objects compared to jets due to the excellent performance of the electromagnetic calorimeter and the muon system.
+For example, the energy resolution for 100\gev photons is better than $1\%$ while for 100\gev jets it is about $10\%$.
+Hence, instead of the generator-level jet, the reference object can be used in the computation \qeq{eq:Jets:ResponseDefinition} of the response.
+
+In both cases only events with minimal additional jet activity are selected to avoid the occurrence of hard QCD radiation and the consequent momentum imbalance between the jet and the reference object.
+Furthermore, two principle effects have to be considered.
+Firstly, the MC-truth response is defined relative to the generator-level jet \pt which is in general smaller than the \pt of the original parton due to hadronisation and jet-clustering effects.
+In case of the photon or $Z$ boson, on the other hand, these effects are not present, and hence the response \wrt the actual parton \pt is probed leading to a smaller jet energy scale.
+\todo{size, strategy}
+Secondly, the MC-truth response is determined for a QCD-multijet sample and thus averaged over the specific flavour composition, which is dominated by gluons.
+Jets in photon+jet or $Z$+jet events, on the other hand, mostly originate from light-flavour quarks and therefore the measured jet energy scale will be larger.
+\todo{size, strategy}
+
+While the photon/$Z$+jet methods are conceptually straight-forward and provide a direct measurement of the jet response, they lack statistical precision due to the relatively low cross sections of the processes.
+Therefore, another approach, the \textit{\pt-balance method}, which uses QCD-dijet events is also pursued.
+The technique is based on the conservation of the momenta of the two jets in the transverse plane and allows for a measurement of their relative response.
+It is used to relate the transverse momentum response of jets in arbitrary detector regions to that of jets in a reference region at \mbox{$|\eta| < 1.3$}, where the response is most uniform and the reach in \pt is largest.
+Again, only events with little extra jet activity are selected to ensure momentum balance at particle level.
+
+The \pt-balance method is affected by an inherent \textit{resolution bias} due to the fact that the resolution of the probed jet and the reference object, the barrel jet, are of similar size.
+Hence, the migration effects discussed above in \qsec{sec:Jets:JEC:Response:JetEnergyScale} that occur if events are collected in intervals of measured transverse momentum are not negligible also for the reference object.
+If both jets lie in different $|\eta|$ regions, they will have slightly different resolutions and consequently the migration effects will bias the selection differently, resulting in a reduced relative response at large $|\eta|$.
+
+
+% ---------------------------------------------------------------------------------
+\subsection{Calibration of the Jet Energy Scale} \label{sec:Jets:JEC:FactorisedApproach}
+At CMS, the jet energy scale calibration is achieved by application of a correction factor $C$ to the measured\footnote{The measured momentum referred to is again the pre-calibrated signal mentioned in \qsec{sec:Jets:JEC:Response:Components}.} four-momentum $p^{\text{uncorr}}_{\mu}$ of the detector-level jet, such that the corrected momentum becomes
+\begin{equation*}
+  p^{\text{corr}}_{\mu} = C \cdot p^{\text{uncorr}}_{\mu} \;.
+\end{equation*}
+The correction factor $C$ itself factorises into several components which correct for different dependencies of the energy measurement,
+\begin{equation*}
+  C = C_{\text{off}}(\pt^{\text{uncorr}},\eta) \cdot C_{\text{rel}}(\pt',\eta) \cdot C_{\text{abs}}(\pt'') \cdot C_{\text{res}}(\eta) \;.
+\end{equation*}
+The correction factors are applied sequentially in the stated order; each $'$ on \pt denotes the transverse momentum after the previous correction steps.
+Firstly, the \textit{offset correction} $C_{\text{off}}$ compensates energy contributions from instrumental noise as well as pile-up collisions.
+Secondly, the \textit{relative correction} $C_{\text{rel}}$ ensures a uniform jet energy scale in $\eta$, and thirdly, the \textit{absolute correction} $C_{\text{abs}}$ shifts the jet energy scale to $1$.
+Finally, the \textit{residual correction} $C_{\text{res}}$ removes small differences between data and simulation.
+Hence, it is applied to data only.
+The different steps are discussed in detail in~\cite{1748-0221-6-11-P11002,CMS-PAS-JME-10-010,CMS-PAS-JME-07-002}.
+The calibration is determined \wrt the jet-flavour composition of QCD-multijet events.
+Dedicated further correction steps, which are obtained from simulation, exist to optionally correct for the residual difference to the energy scale of jets of a certain flavour.
+This is important, for example, in analyses where \qt-quark decays are reconstructed and the \qb-quark jet is identified.
+
+For the offset correction, the additional energy is determined on a per-jet basis from the average jet \pt area density $\rho$ and the jet area $A_{j}$.
+The latter is obtained by adding a large number of infinitely soft particles to the event and clustering them together with the true measurements into jets.
+Then, $A_{j}$ is defined as the space occupied by the soft particles.
+$\rho$ is measured in QCD-multijet events for all reconstructed jets and is insensitive to the presence of hard jets.
+It is parametrised depending on $\eta$.
+Both, $A_{j}$ and $\rho$ are computed using the $k_{T}$ jet algorithm, which clusters a large number of soft particles.
+The performance of the offset correction is demonstrated by comparison of the MC-truth response after application of $C_{\text{off}}$ to the MC-truth response obtained from events with a low number of pile-up collisions, \cf \qfig{fig:Jets:Response:UncorrectedResponseDistributionNoPU}.
+Clearly, in the additional energy is sufficiently removed from the jets.
+
+Both the relative and the absolute corrections are determined entirely from simulation.
+The MC-truth response \resp is obtained from the \pythia sample in intervals of \ptgen and \etagen, and the correction per interval is defined as the inverse of the average response, \mbox{$1/\mean{\resp}$}.
+It is related to the average detector-level jet \pt in the same interval, and thus the correction can be expressed as a function of measured \pt.
+Following this procedure, $C_{\text{abs}}$ is determined from events with both leading jets in a reference region at \mbox{$|\eta| < 1.3$}, where \mean{\resp} has little dependence on $\eta$, \cf \qsubfig{fig:Jets:Response:MCJES}{right}.
+$C_{\text{rel}}$ is computed in a slightly modified way relative to \mean{\resp} in the reference region as a function of \pt and in intervals of $\eta$ from events where one jet falls into the reference region and one jet in an arbitrary region.
+Since there are more events of this topology than with both jets in the same interval in the forward region, the separation between relative and absolute correction is beneficial because a higher statistical precision is acquired.
+In total ,the combined relative and absolute correction amounts to about $1-5\%$ at \mbox{$\pt > 50\gev$} and \mbox{$|\eta| < 0.5$} and increases to about $10\%$ at \mbox{$\pt = 20\gev$} for $\eta$ between 2 and 3.
+\fixme{uncertainties?}
+The effect of the calibration up to $C_{\text{abs}}$ on the jet response and energy scale is demonstrated in \qfigs{fig:Jets:JEC:CorrectedResponseDistribution}{fig:Jets:Response:MCJES}, respectively.
+After correction, the scale is uniform in $\eta$ and at $1$ to a precision of a few percent.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_UncorrVsCorr_Response_EtaBin0_PtBin9.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_UncorrVsCorr_Response_EtaBin0_PtBin17.pdf} \\
+  \end{tabular}
+  \caption{MC-truth response in a low (\textit{left}) and a medium (\textit{right}) \ptgen interval for uncalibrated jets (\textit{solid histogram}) and after application of the offset, relative, and absolute jet energy corrections (\textit{dashed histogram}).}
+\label{fig:Jets:JEC:CorrectedResponseDistribution}
+\end{figure}
+
+The residual correction is determined similarly in two steps.
+First, the \pt-balance method is employed to measure the average response relative to the \mbox{$|\eta| < 1.3$} reference region in data and in simulation after the $C_{\text{abs}}$ correction-step.
+The relative jet energy scale in 36\pbinv of data collected by CMS in 2010\footnote{The jet energy corrections used in this thesis have been derived from a larger data set of 500\pbinv collected in 2011. Since the behaviour of the relative response is very similar to that in 36\pbinv, the latter results are shown here because they have been published by the CMS collaboration.} and in simulation is shown in \qsubfig{fig:Jets:JEC:RelativeResponse}{left}.
+In data, the average response increases \wrt the reference region by up to $10\%$ at \mbox{$|\eta| \approx 2.5$} and decreases again for larger $|\eta|$ due to the discussed resolution bias.
+In the simulation, on the other hand, it is uniform in pseudorapidity, as it should after the $C_{\text{rel}}$ correction, up to a few percent and decreases only in the very forward regions due to the mentioned bias.
+The observed differences are attributed to an inaccurate modelling of the jet measurement.
+Hence, the data-to-simulation ratio of the relative jet energy scale, \qsubfig{fig:Jets:JEC:RelativeResponse}{right}, is utilised to derive an $\eta$-dependent residual correction, where it is assumed that the resolution bias is the same in both cases.
+The correction amounts to about $2-3\%$ in general and is as large as $10\%$ for \mbox{$|\eta| \approx 2.5$} with an uncertainty of up to $5\%$ at large $|\eta|$, dominated by the uncertainty on the jet resolution.
+After application, the jet energy scale in data is uniform in $\eta$ within $2\%$ as shown ibid.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/JME-10-011_Paper_Figure11.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/JME-10-011_Paper_Figure14.pdf} \\
+  \end{tabular}
+  \caption{Relative jet energy scale after application of the $C_{\text{abs}}$ correction step (\textit{left}) measured with the \pt-balance method as a function of $\eta$ in data (\textit{circles}) and simulation (\textit{histogram}), and its ratio (\textit{right}) without (\textit{open circles}) and with (\textit{solid squares}) application of the residual correction.
+    Both figures are taken from~\cite{1748-0221-6-11-P11002}.}
+  \label{fig:Jets:JEC:RelativeResponse}
+\end{figure}  
+Finally, the absolute jet energy scale in the reference region is measured from photon+jet events in data and in simulation.
+The inverse of its ratio serves as a correction, which amounts to about $1.5\%$ constant in \pt.
+Since a data-to-simulation ratio is employed, the residual correction is still valid for the QCD flavour-composition, provided it is correctly simulated.
+The uncertainty of the result is dominated by a $0.5\%$ uncertainty on the flavour modelling of the QCD and the photon+jet samples.
+
+The total jet energy correction $C$ adds up to $1-5\%$ with an uncertainty of $1-2\%$ for \mbox{$\pt > 50\gev$} and \mbox{$|\eta| < 0.5$}.
+It reaches $10-20\%$ with an uncertainty of $5-7\%$ for \mbox{$\pt = 20\gev$} in all detector regions.
+The simulation-based relative and absolute corrections contribute the largest fraction to $C$ and its uncertainty is dominated by the uncertainty on the relative residual correction.
+
+
+% ---------------------------------------------------------------------------------
+\subsection{An Unbinned Fit Approach for Jet Energy Calibration}
+\todo{remove or fill with content}
+
+
+% ---------------------------------------------------------------------------------
+\section{Jet Transverse Momentum Resolution}
+The jet transverse momentum resolution has been defined previously as the standard deviation of a Gaussian fitted to the response distribution.
+In the following, in \qsec{sec:Jets:Resolution:MCTruth}, the determination of the resolution from simulation is described and the stability of the method is investigated.
+Furthermore, its dependence on the number of pile-up collisions is studied.
+The derived resolution will serve as a reference in the closure tests of measurement techniques developed later on in this thesis.
+Afterwards, in \qsec{sec:Jets:Resolution:Asymmetry}, the \textit{dijet asymmetry} is introduced, which is an important quantity because it can be measured easily in data and it is directly related to the resolution, an aspect which is the basis for the resolution measurements in data.
+
+
+% ---------------------------------------------------------------------------------
+\subsection{MC-Truth Resolution} \label{sec:Jets:Resolution:MCTruth}
+The jet transverse momentum resolution is determined from the \pythia sample as a function of \ptgen in intervals of \etagen.
+It will be referred to as \textit{MC-truth resolution}.
+
+As described above in \qsecs{sec:Jets:JEC:Response:MCTruth}{sec:Jets:JEC:Response:GaussianApproximation}, the MC-truth response distributions are determined in intervals of \ptgen and \etagen, and the core of each distribution is fitted with a Gaussian using the iterative approach.
+The average MC-truth resolution \mbox{$\mean{\sigma_{\text{MC}}(\ptgen,\etagen)/\ptgen}$} is approximated by the standard deviation of the fitted Gaussian.
+In \qfig{fig:Jets:Resolution:MCTruth:Resolution}, it evolution with \ptgen is shown for different \etagen intervals.
+The resolution improves from $12-13\%$ at \mbox{$\ptgen = 50\gev$} to $4\%$ at 1\tev, as expected for calorimetric measurements.
+It is better than for purely calorimeter-based jets, however, which is shown for example in~\cite{1748-0221-6-11-P11002}, because the non-linearity of calorimetric measurements is compensated for in case of the particle-flow algorithm by the reconstruction of individual particles.
+Moreover, at low \pt the momentum measurement of the tracking system is superior and contributes to an improved jet resolution.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionFitRatio_EtaBin0.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionFitRatio_EtaBin1.pdf} \\
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionFitRatio_EtaBin2.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionFitRatio_EtaBin3.pdf} \\
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionFitRatio_EtaBin4.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionFit.pdf} \\
+  \end{tabular}
+  \caption{MC-truth resolution \mbox{$\mean{\sigma_{\text{MC}}/\ptgen}$} (\textit{circles}) in different \ptgen and \etagen intervals.
+    They are fitted with the \ptgen dependent function \qeq{eq:Jets:Resolution:MCTruth:Parametrisation} in each \etagen interval.
+  }
+  \label{fig:Jets:Resolution:MCTruth:Resolution}
+\end{figure}
+
+The different measurements in each \etagen interval are fitted with the function
+\begin{equation}
+  \label{eq:Jets:Resolution:MCTruth:Parametrisation}
+  \frac{\sigma_{\text{MC}}}{\pt}\left(\pt\right) = \sqrt{\text{sgn}(N)\cdot\left(\frac{N}{\pt}\right)^{2} + S^{2}\cdot\pt^{m-1}} \;,
+\end{equation}
+where $N$, $S$, and $m$ are free parameters, \cfqfig{fig:Jets:Resolution:MCTruth:Resolution}.
+In order to ensure physically meaningful jet objects, the fit range was chosen to start at 10\gev.
+The fitted parameter values are listed in \qtab{tab:App:Jets:MCTruthResolution} in Appendix~\ref{sec:App:Jets}.
+
+The function \qeq{eq:Jets:Resolution:MCTruth:Parametrisation} differs from the parametrisation with a noise, a stochastic, and a constant term typically employed for calorimetric measurements, which can be found \eg in \addref.
+It was introduced in~\cite{1748-0221-6-11-P11002} in order to better describe the resolution of low-\ptgen jets whose reconstruction is dominated by tracking information.
+\todo{description of regimes, stochastic, bla: Peter, logbuch, 9.8.2010}
+
+The dependence of the MC-truth resolution on the matching criterion for generator-level and detector-level jets was studied, \cf \qsubfig{fig:Jets:Resolution:MCTruth:DeltaR}{left}.
+As expected, a larger $\Delta\text{R}_{\text{max}}$ results in a larger resolution.
+On the one hand, if the generator-level particles originating from the same parton get clustered into two jets because large momenta transverse to the parton's momentum occur during the showering process and if further the corresponding detector-level jets are clustered as one jet because the spatial resolution is too coarse, the determined MC-truth response will be relatively large.
+On the other hand, if two detector-level jets are clustered from the signals produced by one generator-level jet, the MC-truth response will be relatively small.
+In both cases, the distance in $R$ between the matched jets is larger on average than without splitting.
+However, the effect is visible only for \mbox{$\ptgen < 60\gev$}, and its size is moderate.
+At 30\gev, for instance, the resolution increases by $15\%$ when changing $\Delta\text{R}_{\text{max}}$ from 0.05 to 0.25.
+As demonstrated in \qsubfig{fig:Jets:Resolution:MCTruth:DeltaR}{right}, with the choice of \mbox{$\Delta\text{R}_{\text{max}} = 0.1$}, which is used throughout this thesis, a detector-level jet can be matched to the selected generator-level jets in $99\%$ of the cases.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionVsDeltaR_EtaBin0.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_DeltaR_EtaBin0.pdf} \\
+  \end{tabular}
+  \caption{MC-truth resolution for different choices of $\Delta\text{R}_{\text{max}}$ as a function of \ptgen for \mbox{$|\eta| < 0.5$} (\textit{left}).
+    The distance in $\Delta\text{R}$ between a generator-level jet and the closest detector-level jet is smaller than 0.1 for more than $99\%$ of the jet pairs (\textit{right}).
+  }
+  \label{fig:Jets:Resolution:MCTruth:DeltaR}
+\end{figure}
+
+In \qsubfig{fig:Jets:Resolution:MCTruth:NSigCoreAndDijetSelection}{left}, the dependence of the MC-truth resolution on the chosen response interval for the Gaussian fit is depicted.
+A larger interval includes more contributions from the mentioned, second Gaussian component and hence the resolution is expected to become larger.
+The overall effect is small, however.
+At \mbox{$\ptgen = 30\gev$}, the resolution increases by $6\%$ when increasing the fitting interval from $1.5$ to \mbox{$2.5\;\sigma$}.
+Above 100\gev, no difference is visible.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_NSigCore_EtaBin0.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionDijetSelection_EtaBin0.pdf} \\
+  \end{tabular}
+  \caption{MC-truth resolution as a function of \ptgen for \mbox{$|\eta| < 0.5$} for different choices of the response interval in which the Gaussian fit is performed (\textit{left}) and compared to the resolution obtained on a dijet sample (\textit{right}).
+  }
+  \label{fig:Jets:Resolution:MCTruth:NSigCoreAndDijetSelection}
+\end{figure}
+
+The MC-truth resolution was determined from an inclusive QCD-multijet sample, and hence in particular was averaged over the flavour composition expected in that case.
+Later in \qsec{sec:ResCore:Validation:MCClosure}, the MC-truth resolution will serve as reference in the closure test of the maximum-likelihood method, which will be used to measure the resolution from QCD-dijet events.
+Since the fraction of gluon jets is enhanced in dijet events compared to multijet events, \cf \addref, the sensitivity of the MC-truth resolution to a dijet selection was investigated.
+Dijet events are selected from the \pythia sample by applying the following criteria, which will be motivated in detail later in \qsec{sec:ResCore:EvtSel}:
+\begin{itemize}
+\item \mbox{$|\Delta\phi(\ptgenivec{1},\ptgenivec{2})| > 2.7$}, \ie the leading two generator-level jets have to point into opposite directions in the transverse plane, and
+\item \mbox{$\ptgeni{3} < 0.14\cdot\frac{1}{2}(\ptgeni{1}+\ptgeni{2})$}, \ie the transverse momentum of additional generator-level jets in the event has to be less than $14\%$ of the average transverse momentum of the leading two jets.
+\end{itemize}
+Then, the MC-truth resolution is determined as above for the dijet sample.
+There is no significant difference to the multijet case as apparent from \qsubfig{fig:Jets:Resolution:MCTruth:NSigCoreAndDijetSelection}{right}.
+Hence, the MC-truth resolution from the multijet sample will be used in the following in order to profit from the higher statistical precision.
+
+Finally, the presence of pile-up collisions can impact the resolution because additional energy is distributed in the detector.
+If energy deposits of particles from pile-up interactions overlap with a detector-level jet $j_{i}$ they will be clustered into $j_{i}$.
+The extra energy might not be completely removed by the offset correction because the involved energy-density $\rho$ is approximated as an event average.
+Hence, the computed response of $g_{i}$, the generator-level jet $j_{i}$ is assigned to, gets biased towards larger values, and if $g_{i}$ is one of the leading two generator-level jets, the determination of the MC-truth resolution will be affected.
+The relative size of the effect is expected to be reduced at larger \pt, however, because the occurence of high-\pt pile-up particles is rare as discussed above.
+There are further configurations which possibly bias the response, for instance if $g_{i}$ and $j_{i}$ originate from different collisions.
+However, these cases are expected to be highly suppressed because, given the tight $\Delta\text{R}$ matching criterion and the jet's cone size, it is unlikely that the wronly assigned jets are reconstructed individually.
+As observed in \qfig{fig:Jets:Resolution:MCTruth:PU}, at \mbox{$\ptgen = 30\gev$} the MC-truth resolution increases by $25\%$ when increasing the number of pile-up interactions from less than five to more than 14.
+The difference is less pronounced at higher \pt, as expected.
+Above 100\gev, no significant effect is observed.
+\begin{figure}[!ht]
+  \centering
+   \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_ResolutionNPU_EtaBin0.pdf}
+ \caption{MC-truth resolution as a function of \ptgen for \mbox{$|\eta| < 0.5$} determined from events with a different number of simulated pile-up collisions.}
+  \label{fig:Jets:Resolution:MCTruth:PU}
+\end{figure}
+
+%\todo{JetID has not been mentioned here, irrelevant for MC. So do not mention at all? ``The impact on the MC-truth resolution of applying the JetID requirement at event selection was found to be completely negligible.''}
+
+
+
+% ---------------------------------------------------------------------------------
+\subsection{Dijet Asymmetry} \label{sec:Jets:Resolution:Asymmetry}
+The dijet asymmetry \asym is defined for events with at least two jets as
+\begin{equation}
+  \label{eq:Jets:Resolution:Asymmetry:DijetAsymmetry}
+  \asym = \frac{\pti{1}-\pti{2}}{\pti{1}+\pti{2}} \;,
+\end{equation}
+where in this case \pti{1} and \pti{2} refer to the randomly ordered transverse momenta of the two leading jets.
+In \qsubfig{fig:Jets:Resolution:Asymmetry:Asym}{left}, an example of an asymmetry distribution is shown for dijet events in data and simulation which were selected as described later on in \qsec{sec:ResCore:EvtSel} by requiring a back-to-back topology and restricting additional jet activity.
+The average transverse momentum of the two leading jets,
+\begin{equation*}
+  \ptave = \frac{1}{2}\left(\pti{1} + \pti{2}\right) \;,
+\end{equation*}
+had to lie in the interval \mbox{$? < \ptave < ?$}\fixme{boundaries} and they had to be within \mbox{$|\eta| < 0.5$}.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/TMP_Tail_163337-167151_Sig25-Inf_PF_EtaBin0_PtBin3_Pt3Bin2_PtAsym.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/TMP_Res_163337-167151_PF_PtAsym_Data_EtaBin0_PtBin5.pdf} \\
+  \end{tabular}
+  \caption{Dijet asymmetry distribution (\textit{left}) in data (\textit{circles}) and simulation (\textit{histogram}).
+    The apparent differences are discussed in \qsec{}.
+    Increased transverse-momentum imbalance, characterised by the fractional transverse momentum of the third jet, \pti{3}, relative to the average transverse momentum of the leading jets, \ptave, results in a broader asymmetry (\textit{right}).
+    \todo{Update style, same bin}
+  }
+  \label{fig:Jets:Resolution:Asymmetry:Asym}
+\end{figure}
+
+The standard deviation $\sigma_{\asym}$ of the asymmetry can be expressed as 
+\begin{equation*}
+  \sigma^{2}_{\asym} = \left|\frac{\partial\asym}{\partial\pti{1}}\right|^{2}\cdot\sigma^{2}(\pti{1}) + \left|\frac{\partial\asym}{\partial\pti{2}}\right|^{2}\cdot\sigma^{2}(\pti{2}) \;.
+\end{equation*}
+If at particle level the transverse momenta of both jets are balanced and if they are in the same $\eta$ region, then \mbox{$\mean{\pti{1}} = \mean{\pti{2}} \equiv \mean{\pt}$} and \mbox{$\sigma(\pti{1}) = \sigma(\pti{2}) \equiv \sigma(\pt)$}, and hence the jet resolution is related to $\sigma_{\asym}$ via
+\begin{equation}
+  \label{eq:Jets:Resolution:Asymmetry:ResolutionVsAsymmetry}
+  \frac{\sigma(\pt)}{\mean{\pt}} = \sqrt{2}\cdot\sigma_{\asym} \;.
+\end{equation}
+This important relation was first exploited at the \dzero experiment~\cite{PhysRevD.64.032003} to measure the jet resolution from dijet data and the method is also applied by CMS~\cite{1748-0221-6-11-P11002}.
+
+In realistic collision events, the idealised dijet topology of two jets with exactly balancing transverse momenta at parton-level is compromised because momentum is transferred from the original parton to additional jets from ISR/FSR and to soft particles of the underlying-event activity.
+A transverse-momentum imbalance is induced, and in consequence the recorded asymmetry distribution is broadened, \cf \qsubfig{fig:Jets:Resolution:Asymmetry:Asym}{right}.
+Hence, if the jet resolution is measured using relation \qeq{eq:Jets:Resolution:Asymmetry:ResolutionVsAsymmetry} it will be overestimated.
+
+The effect is investigated with simulated events.
+Events with dijet topology are selected from the \pythia sample as before by requiring \mbox{$|\Delta\phi(\ptgenivec{1},\ptgenivec{2})| > 2.7$} and \mbox{$|\etagen| < 0.5$} for the leading two generator-level jets.
+From this sample, the asymmetry and MC-truth response are recorded in small intervals of \ptgen.
+In \qsubfig{fig:Jets:Resolution:Asymmetry:Contributions}{left}, the standard deviation $\sigma_{\asym}$, multiplied by $\sqrt{2}$ to account for \qeq{eq:Jets:Resolution:Asymmetry:ResolutionVsAsymmetry}, is shown.
+Clearly, it is larger than the MC-truth resolution\footnote{Here, the resolution is not obtained from a Gaussian fit to the response distribution but rather determined as the sample standard deviation.
+This is sufficient for the intended demonstration purpose, even if the presence of tails affect the result, since it is consistent with the definition of $\sigma_{\asym}$.} \mbox{$\sigma_{\text{MC}}(\pt)/\mean{\pt}$}.
+\begin{figure}[!ht]
+  \centering
+  \begin{tabular}{cc}
+    \includegraphics[width=0.45\textwidth]{figures/jets/MCTruthSummer11_AsymmetryContributions.pdf} &
+    \includegraphics[width=0.45\textwidth]{figures/jets/Sketch_Projections.pdf} \\
+  \end{tabular}
+  \caption{(\textit{Left}) Standard deviation, multiplied by $\sqrt{2}$, of the measured dijet asymmetry (\textit{solid squares}) in simulated events as a function of \ptgen.
+    The two leading jets lie within \mbox{$|\eta| < 0.5$} and are separated in azimuth by \mbox{$|\Delta\phi| > 2.7$}.
+    It is well described by the quadratic sum (\textit{solid line}) of the MC-truth resolution (\textit{dashed line}) and the standard deviation of the relative momentum imbalance along the dijet axis (\textit{dotted line}).
+    The dijet axis $\phi_{||}$ is defined in the transverse plane as the direction perpendicular to $\phi_{\perp}$, the bisecting line of $\Delta\phi_{12}$ (\textit{right}).
+\todo{adjust labels}}
+  \label{fig:Jets:Resolution:Asymmetry:Contributions}
+\end{figure}
+
+The difference is attributed to the transverse-momentum imbalance due to the radiation of hard partons which result in additional jets\footnote{Additional small contributions due to the difference between the momenta of the parton and the particle-level jet are neglected here. They are considered lateron in \qsec{sec:ResCore:Method:ImbalanceCorrections:PLI}.}.
+In fact, the imbalance is caused by the components of their momenta along the dijet axis, as illustrated in \qsubfig{fig:Jets:Resolution:Asymmetry:Contributions}{right}.
+The dijet axis $\phi_{||}$ of an event is defined in the transverse plane as the direction perpendicular to the bisecting line of $\Delta\phi_{12}$, where $\Delta\phi_{12}$ denotes the angle between the two leading jets.
+Assuming \mbox{$\Delta\phi_{12} = \pi$}, the absolute size \ptimbal of the transverse-momentum imbalance due to additional jets is given by
+\begin{equation*}
+  \ptimbal = \left|\sum_{i>2}\ptgeni{i}\cdot\cos\left(\phi^{\text{gen}}_{i}-\phi_{||}\right)\right| \;.
+\end{equation*}
+Here, the generator-level momenta and angel of the jets are used to be independent from the detector resolution.
+The broadening of the asymmetry is modelled by recording \ptimbalrel, the imbalance relative to the original transverse momentum scale of the dijet event,
+\begin{equation}
+  \label{eq:Jets:Resolution:Asymmetry:PtImbal}
+  \ptimbalrel = \frac{\ptimbal}{\ptgenave + \ptimbal} \;,
+\end{equation}
+where \mbox{$\ptgenave = (\ptgeni{1}+\ptgeni{2})/2$}.
+Its standard deviation $\sigma^{\text{rel}}_{\text{imbal}}$ is also shown in \qsubfig{fig:Jets:Resolution:Asymmetry:Contributions}{left}.
+As demonstrated, it accounts precisely for the observed difference, \ie \mbox{$\sqrt{2}\cdot\sigma_{\asym}$} is regained by adding $\sigma^{\text{rel}}_{\text{imbal}}$ in quadrature to the MC-truth resolution,
+\begin{equation*}
+  2\cdot\sigma^{2}_{\asym} = \left(\frac{\sigma_{\text{MC}}(\pt)}{\mean{\pt}}\right)^{2} + \left(\sigma^{\text{rel}}_{\text{imbal}}\right)^{2} \;.
+\end{equation*}
+Measurements of the jet resolution which are based on the dijet asymmetry have to compensate for this systematic effect, as will be discussed further in \qsecs{sec:ResCore:Method:ImbalanceCorrections}{sec:ResTail:Method:AdditionalJets}.
+
+
+\cleardoublepage
